@@ -9,6 +9,13 @@ Vágó István szeretne Legyen ön is milliomos játékot online játszani a Cov
 A cél egy webes felület létrehozása Javascript segítségével, ami a kvízjátékot megvalósítva kommunikál a felhasználóval, ahol meg tud jelölni válaszokat, és visszajelzést kapni, hogy jó volt-e, mennyi választ adott
 
 ### 3. Jelenlegi üzleti folyamatok
+
+- Helyes válasz esetén: feljebb lép a játékos a nyereményben.
+- Rossz válasz esetén: elveszti a játékos a játékot.
+- Adott pontokon a játékos megállhat és elviheti a megnyert pénzt.
+- Válasz megjelölése.
+
+
 ### 4. Igényelt üzleti folyamatok
 ### 5. A rendszerre vonatkozó szabályok
 ### 6. Fogalomszótár Követelménylista
