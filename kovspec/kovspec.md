@@ -42,5 +42,6 @@ A cél egy webes felület létrehozása Javascript segítségével, ami a kvízj
 GDPR: Minden adat és kérdés bizalmas kezelése, ne férhessen hozzá idegen személy.
 
 Segítség:
+
 telefonálás - a játékos 20 másodperc erejéig felhívhat egy külső személyt
 nézői vélemény - a nézőtéren elhelyezkedő nézők által adott választ megtekintheti a játékos, válaszonként százalékos formában felezés
