@@ -6,7 +6,7 @@ Vágó István szeretne Legyen ön is milliomos játékot online játszani a Cov
 
 ### 2. Vágyálom rendszer
 
-A cél egy webes felület létrehozása Javascript segítségével, ami a kvízjátékot megvalósítva kommunikál a felhasználóval, ahol meg tud jelölni válaszokat, és visszajelzést kapni, hogy jó volt-e, mennyi választ adott
+A cél egy webes felület létrehozása Javascript segítségével, ami a kvízjátékot megvalósítva kommunikál a felhasználóval, ahol meg tud jelölni válaszokat, és visszajelzést kapni, hogy jó volt-e, mennyi választ adott.
 
 ### 3. Jelenlegi üzleti folyamatok
 
@@ -38,3 +38,9 @@ A cél egy webes felület létrehozása Javascript segítségével, ami a kvízj
 
 
 ### 7. Fogalomszótár
+
+GDPR: Minden adat és kérdés bizalmas kezelése, ne férhessen hozzá idegen személy.
+
+Segítség:
+telefonálás - a játékos 20 másodperc erejéig felhívhat egy külső személyt
+nézői vélemény - a nézőtéren elhelyezkedő nézők által adott választ megtekintheti a játékos, válaszonként százalékos formában felezés
