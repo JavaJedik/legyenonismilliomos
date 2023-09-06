@@ -29,5 +29,12 @@ A cél egy webes felület létrehozása Javascript segítségével, ami a kvízj
 - Nem megengedett eszközök használatának tiltása, amellyel a segítségkérést meg lehetne kerülni.
 - Ha a játékos megáll a játékban, akkor az adott nyereményt elviheti, de a játékot nem folytathatja.
 
-### 6. Fogalomszótár Követelménylista
+
+### 6. Követelménylista
+
+- A felület reszponzív legyen.
+- Nyelvválasztás lehetősége (angol / magyar).
+- Külső fenyegetettségek elől védett legyen a rendszer.
+
+
 ### 7. Fogalomszótár
