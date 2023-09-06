@@ -23,5 +23,11 @@ A cél egy webes felület létrehozása Javascript segítségével, ami a kvízj
 
 
 ### 5. A rendszerre vonatkozó szabályok
+
+- A webes felület szabványos eszközökkel készüljön (html / css / javascript).
+- Egy játékon belül minden segítséget egyszer lehessen felhasználni.
+- Nem megengedett eszközök használatának tiltása, amellyel a segítségkérést meg lehetne kerülni.
+- Ha a játékos megáll a játékban, akkor az adott nyereményt elviheti, de a játékot nem folytathatja.
+
 ### 6. Fogalomszótár Követelménylista
 ### 7. Fogalomszótár
