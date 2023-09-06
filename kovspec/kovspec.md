@@ -17,6 +17,11 @@ A cél egy webes felület létrehozása Javascript segítségével, ami a kvízj
 
 
 ### 4. Igényelt üzleti folyamatok
+
+- Kérdések és a hozzájuk tartozó válaszok összegyűjtése, feldolgozása.
+- Játékon belüli segítségek implementálása.
+
+
 ### 5. A rendszerre vonatkozó szabályok
 ### 6. Fogalomszótár Követelménylista
 ### 7. Fogalomszótár
