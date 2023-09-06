@@ -1,1 +1,1 @@
-# legyenonismilliomos
+# Legyen Ön is milliomos!
