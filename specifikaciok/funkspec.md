@@ -73,3 +73,4 @@ A játékos elindítja a játékot, és kap egy kérdést 4 válaszlehetőségge
 ### Fogalomszótár
 
 - [MVC modell:](https://hu.wikipedia.org/wiki/Modell-n%C3%A9zet-vez%C3%A9rl%C5%91)  Összetett, sok adatot a felhasználó elé táró számítógépes alkalmazásokban gyakori fejlesztői kívánalom az adathoz (modell) és a felhasználói felülethez (nézet) tartozó dolgok szétválasztása, hogy a felhasználói felület ne befolyásolja az adatkezelést, és az adatok átszervezhetők legyenek a felhasználói felület változtatása nélkül. A modell-nézet-vezérlő ezt úgy éri el, hogy elkülöníti az adatok elérését és az üzleti logikát az adatok megjelenítésétől és a felhasználói interakciótól egy közbülső összetevő, a vezérlő bevezetésével.
+- Szakaszkérdés: Amikor a játékos megválaszolja ezt a kérdést, akkor attól a ponttól kezdve ez lesz az az összeg, amit haza visz, ha a továbbiakban helytelenül válaszol.
