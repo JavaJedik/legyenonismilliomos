@@ -11,7 +11,6 @@ Vágó István szeretne Legyen ön is milliomos játékot online játszani a Cov
 - Egy grafikus felület, ami interakciót hajthat végre a felhasználóval
 - Angol és magyar nyelv
 
-
 ### Jelenlegi üzleti folyamatok modellje
 
 A nézők a tévében látott Legyen Ön is Milliomos műsor után szívesen játszanának maguk is egy ilyen játékon. Mivel a műsorba a bejutás ritka, ezért szeretnénk elkészíteni egy mindenki számára elérhető Legyen Ön is Milliomos játékot, melyet bármely böngésző segítségével könnyen el tud érni a játékos.
@@ -29,6 +28,14 @@ Mobilos megjelenés:
 ![](../kepek/Milliomos-mobil.png)
 
 ### Forgatókönyv
+
+- Felhasználók nyomon követése
+- Kérdések kiolvasása az adatbázisből
+- Néző interakciói a grafikus felülettel
+- MVC (modell view controller) model megvalósítása
+- Váltás a kérdések között
+- Játék szakaszainak implementálása
+
 
 ### Funkció - követelmény megfeleltetés
 
