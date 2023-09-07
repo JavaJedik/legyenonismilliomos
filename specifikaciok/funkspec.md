@@ -51,6 +51,9 @@ A nézők a tévében látott Legyen Ön is Milliomos műsor után szívesen já
 
 ### Használati esetek
 
+- Magyar vagy angol nyelven
+- Telefonról vagy PC-ről
+
 ### Képernyő tervek
 
 Számítógépes megjelenés:
