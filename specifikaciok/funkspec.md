@@ -7,6 +7,11 @@ Vágó István szeretne Legyen ön is milliomos játékot online játszani a Cov
 
 ### Követelménylista
 
+- Egy adatbázis, amiből konzisztensen lehet írni és olvasni
+- Egy grafikus felület, ami interakciót hajthat végre a felhasználóval
+- Angol és magyar nyelv
+
+
 ### Jelenlegi üzleti folyamatok modellje
 
 A nézők a tévében látott Legyen Ön is Milliomos műsor után szívesen játszanának maguk is egy ilyen játékon. Mivel a műsorba a bejutás ritka, ezért szeretnénk elkészíteni egy mindenki számára elérhető Legyen Ön is Milliomos játékot, melyet bármely böngésző segítségével könnyen el tud érni a játékos.
