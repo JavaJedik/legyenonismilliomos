@@ -54,9 +54,11 @@ A nézők a tévében látott Legyen Ön is Milliomos műsor után szívesen já
 ### Képernyő tervek
 
 Számítógépes megjelenés:
+
 ![](../kepek/Milliomos-pc.png)
 
 Mobilos megjelenés:
+
 ![](../kepek/Milliomos-mobil.png)
 
 ### Forgatókönyv
