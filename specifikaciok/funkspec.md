@@ -17,6 +17,13 @@ A nézők a tévében látott Legyen Ön is Milliomos műsor után szívesen já
 
 ### Igényelt üzleti folyamatok modellje
 
+- Felhasználók nyomon követése
+- Kérdések kiolvasása az adatbázisből
+- Néző interakciói a grafikus felülettel
+- MVC (modell view controller) model megvalósítása
+- Váltás a kérdések között
+- Játék szakaszainak implementálása
+
 ### Használati esetek
 
 ### Képernyő tervek
@@ -29,13 +36,7 @@ Mobilos megjelenés:
 
 ### Forgatókönyv
 
-- Felhasználók nyomon követése
-- Kérdések kiolvasása az adatbázisből
-- Néző interakciói a grafikus felülettel
-- MVC (modell view controller) model megvalósítása
-- Váltás a kérdések között
-- Játék szakaszainak implementálása
-
+A játékos elindítja a játékot, és kap egy kérdést 4 válaszlehetőséggel. Igényelhet 3 segítséges bármikor. A játékos megjelöl egy kérdést, ha jól válaszol, továbbjut, és ez addig folytatódik, amíg ki nem száll vagy elront egy kérdést, ilyenkor a legelső fix jutalmat kapja meg. Csalás azonnali kizárást eredményez.
 
 ### Funkció - követelmény megfeleltetés
 
