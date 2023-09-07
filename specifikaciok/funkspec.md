@@ -5,6 +5,31 @@ Vágó István szeretne Legyen ön is milliomos játékot online játszani a Cov
 
 ### Jelenlegi helyzet
 
+15 kérdésre kell a játékosnak válaszolni a 40 millió forintos főnyeremény megszerzéséhez.
+
+A pénznyeremények sorrendben a következők:
+- 5.000 ft
+- 10.000 ft
+- 25.000 ft
+- 50.000 ft
+- 100.000 ft
+- 200.000 ft
+- 300.000 ft
+- 500.000 ft
+- 800.000 ft
+- 1.500.000 ft
+- 3.000.000 ft
+- 5.000.000 ft
+- 10.000.000 ft
+- 20.000.000 ft
+- 40.000.000 ft
+
+A játék szakaszkérdéseiért járó jutalom:
+100.000 ft (5.), 1.500.000 ft (10.)
+
+Ha a játékos eléri ezeket a pontokat, akkor utána a játékos hiába ad rossz választ egy kérdésre, akkor az elért határért járó összeget viszi haza magával.
+A játékos bármikor kiszállhat a játékból és elviheti az adott összeget, de ilyenkor nem tudja a játékos, hogy mi lesz a következő kérdése.
+
 ### Követelménylista
 
 - Egy adatbázis, amiből konzisztensen lehet írni és olvasni
