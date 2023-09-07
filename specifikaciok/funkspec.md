@@ -62,7 +62,7 @@ Számítógépes megjelenés:
 
 Mobilos megjelenés:
 
-![](../kepek/Milliomos-mobil.png)
+![](../kepek/milliomos-mobil.png)
 
 ### Forgatókönyv
 
