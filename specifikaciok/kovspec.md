@@ -4,7 +4,7 @@
 
 Vágó István szeretne Legyen ön is milliomos játékot online játszani a Covid miatt, mert nem tudnak bemenni a stúdióba.
 Javascript nyelven szeretné lefejleszteni egy webes felületet, ahol az emberek tudnak játszani.
-Mivel ez egy nagyon közkedvelt játék, ezért úgy gondoljuk, hogy érdemes befektetni a fejlesztésbe, és arra számítunk, hogy széles közönséghez fog majd eljutni a szoftver.
+Mivel ez egy nagyon közkedvelt játék, ami látszik abból is, hogy milyen sok ember jelentkezik a tévés vetélkedőkbe, ezért úgy gondoljuk, hogy érdemes befektetni a fejlesztésbe, és arra számítunk, hogy széles közönséghez fog majd eljutni a szoftver.
 
 
 ### 2. Vágyálom rendszer
