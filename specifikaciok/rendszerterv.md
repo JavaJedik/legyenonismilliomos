@@ -9,8 +9,42 @@
 
 ### Követelmények
 
+- webes felület (responsive webdesign)
+  - frameworks
+    - REACT + HTML - javascript frontend
+    - NODEJS - javascript backend
+    - MariaDB - adatbázis,- SQL a játékhoz
+  - felhasználói
+  - opcionális admin vagy kvízmester felület
+    - esetleges toplista
+  - biztonság
+    - a szerver védve legyen a támadásoktól 
+    - a játékos ne tudjon csalni
+      - ne tudja megszegni a játékszabályokat
+      - ne tudja manipulálni az adatbázist és a kérdéseket
+- adatbázis (ingyenes, de mindent tudjon, szokásos hozzáállás)
+  - Zéró redundancia és felesleges függőség
+  - kérdések tárolása
+    - válaszlehetőségek, helyes válasz
+    - nehézségi szint, nyeremény, fix nyeremény-e?
+    - hány ember adott rá jó / rossz választ
+  - a felhasználó adatainak tárolása
+    - név
+    - email
+    - regisztráció ideje
+    - elvitt nyeremény
+    - játszott játékok, kérdésekre adott válaszok
+  - a játékok tárolása
+    - ki -és mikor játszotta
+    - hanyadik szintig jutott el
+    - fix nyereménnyel kiszállt vagy bevállalós volt
+    - mik voltak a kérdések, milyen válaszokat adott rá 
+- segítségek használata
+  - három segítség megengedett
+    - kérdésenként egy, játékonként egy fajtából egy
 
 ### Funkcionális terv
+
 
 
 ### Fizikai környezet
