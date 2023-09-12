@@ -35,6 +35,8 @@ Elsőre kicsit zavarosnak hangzik, de minden felesleges függőség és redundan
 
 Ezzel az adatbázissal képesek leszünk egy teljes játékot naplózva eltárolni, egészen attól, hogy milyen sorrendben jöttek a kérdések, milyen választ adott rá az illető, mikor,- és ki játszott, mennyi pénzt nyert stb. anélkül, hogy erről hosszú naplóüzeneteket vezetnénk, és tárolnánk egy külön adatbázisban, mindent lehet kérdezni. További igények nem merültek fel. 
 
+És igen, gondoltunk arra, mi van, ha a játékos internete vagy bármi megszakad játék közben. Ugye kérdés közben nem lehet kiszálni, valamit válaszolni kell. Erre is van megoldás. A választott kérdés az adott kérdésnél lehet NULL érték. Ezzel jelezve azt, hogy a játékos nem tudott a kérdésre válaszolni, és ezt a lekérdezésekben is tudjuk implementálni, így nem fogunk kapni hamis nyereményösszegeket.
+
 ### Implementációs terv
 
 
