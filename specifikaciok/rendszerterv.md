@@ -39,7 +39,7 @@ Ezzel az adatbázissal képesek leszünk egy teljes játékot naplózva eltárol
 
 Számunkra nagyon fontos a jó skálázhatóság, az ingyenesség, megbízhatóság, esetleges titkosítás, integráció, nyílt forráskódú, projectfüggetlen adatbázis-szerver, ami SQL lekérdezéseket használ egy relációs adatbázisban. Több adatbáziskezelőt is megnéztünk, és a MariaDB-re esett a választás. Az alábbi érvelésben nem cél szidni az Oracle-t, akinek van pénze,- ideje,- kedve rá, és az Amerikai Nemzeti Bank szintű rendszert szeretne építeni, az nem nyúlhat mellé vele, de nekünk az előbbiek fontosak. Az okok a következők voltak:
  - Oracle erősen fizetős, az ingyenes verzióban:
-   - Egy szálon enged adatbázisműveleteket futtatni
+   - Egy szálon enged adatbázisműveleteket futtatni (0 skálázhatóság)
    - Táblák szába, adatbázisméret nagyon kicsi (max 11 GB)
    - Nincs titkosítás és ehhez szükséges feature-ök
    - Haladó adatbázisműveletek sincsenek benne
