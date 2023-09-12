@@ -44,6 +44,8 @@ A játékos bármikor kiszállhat a játékból és elviheti az adott összeget,
 
 A nézők a tévében látott Legyen Ön is Milliomos műsor után szívesen játszanának maguk is egy ilyen játékon. Mivel a műsorba a bejutás ritka, ezért szeretnénk elkészíteni egy mindenki számára elérhető Legyen Ön is Milliomos játékot, melyet bármely böngésző segítségével könnyen el tud érni a játékos.
 
+Ezen kívül a kérdéseknek különböző nehézségi szintekkel kell rendelkezniük, hogy a nagyobb nyereményekhez bonyolultabb kérdések megválaszolása legyen szükséges. Így adptt myereményszinteket elkülönítve fogunk az adott nehézséghez tartozó kérdések közül random választani. A kérdésen belüli válaszok is random sorrendben jellennek meg, hogy ne legyen szabályszerűség arra, hogy melyik választ érdemes megjelölni vagy ha netán máshonnan emlékszik rá a versenyző.
+
 ### Igényelt üzleti folyamatok modellje
 
 - Felhasználók nyomon követése
