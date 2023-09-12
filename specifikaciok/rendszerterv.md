@@ -18,19 +18,24 @@
   - opcionális admin vagy kvízmester felület
     - esetleges toplista
   - biztonság
+    - adatkezelés és GDPR kérdések
     - a szerver védve legyen a támadásoktól 
     - a játékos ne tudjon csalni
       - ne tudja megszegni a játékszabályokat
       - ne tudja manipulálni az adatbázist és a kérdéseket
+    - a rendszer naplozásában / adatbázisában kell tudni, hogy:
+      - a játékos nem jelölt meg semmit, mert mondjuk elment a nete.
 - adatbázis (ingyenes, de mindent tudjon, szokásos hozzáállás)
   - Zéró redundancia és felesleges függőség
   - kérdések tárolása
     - válaszlehetőségek, helyes válasz
     - nehézségi szint, nyeremény, fix nyeremény-e?
     - hány ember adott rá jó / rossz választ
+    - magyar vagy angol nyelven
   - a felhasználó adatainak tárolása
     - név
     - email
+    - nem (lehet null érték, ha nem ismert vagy nem szeretné megadni)
     - regisztráció ideje
     - elvitt nyeremény
     - játszott játékok, kérdésekre adott válaszok
@@ -45,6 +50,18 @@
 
 ### Funkcionális terv
 
+A felhasználónak:
+  - be kell tudni jelentkeznie
+  - játékot kell tudni indítania
+    - tudjon nyelvet váltani (játék előtt)
+    - ki tudjon belőle szállni
+    - kérdést tudjon megjelölni, visszajelzést kell kapnia
+
+A szervernek:
+  - react + html, css frontend, nodejs backend, MariaDB adatbázis
+  - az egyes komponenseknek jól kell kommunikálnia egymással
+  - a játék, játékos, rendszer minden folyamatát naplózni kell
+  - folyamatosan futni kell, nem szabad random leállnia
 
 
 ### Fizikai környezet
