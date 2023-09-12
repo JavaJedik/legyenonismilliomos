@@ -39,19 +39,19 @@ Ezzel az adatbázissal képesek leszünk egy teljes játékot naplózva eltárol
 
 Számunkra nagyon fontos a jó skálázhatóság, az ingyenesség, megbízhatóság, esetleges titkosítás, integráció, nyílt forráskódú, projectfüggetlen adatbázis-szerver, ami SQL lekérdezéseket használ egy relációs adatbázisban. Több adatbáziskezelőt is megnéztünk, és a MariaDB-re esett a választás. Az alábbi érvelésben nem cél szidni az Oracle-t, akinek van pénze,- ideje,- kedve rá, és az Amerikai Nemzeti Bank szintű rendszert szeretne építeni, az nem nyúlhat mellé vele, de nekünk az előbbiek fontosak. Az okok a következők voltak:
  - Oracle erősen fizetős, az ingyenes verzióban:
-  - Egy szálon enged adatbázisműveleteket futtatni
-  - Táblák szába, adatbázisméret nagyon kicsi (max 11 GB)
-  - Nincs titkosítás és ehhez szükséges feature-ök
-  - Haladó adatbázisműveletek sincsenek benne
+   - Egy szálon enged adatbázisműveleteket futtatni
+   - Táblák szába, adatbázisméret nagyon kicsi (max 11 GB)
+   - Nincs titkosítás és ehhez szükséges feature-ök
+   - Haladó adatbázisműveletek sincsenek benne
  - MsSQL syntax és integráció is teljesen más
-  - Inkább Windows-ra van tervezve, nem Linuxra
-  - Bár engedékenyebb, mint az Oracle, szintén fizetős
+   - Inkább Windows-ra van tervezve, nem Linuxra
+   - Bár engedékenyebb, mint az Oracle, szintén fizetős
  - NoSQL és egyébb nyelvek opció lett volna, de
-  - szerettjük a relációs adatbázist és az SQL-t. 
+   - szerettjük a relációs adatbázist és az SQL-t. 
  - MySQL lett volna egy jó választás, de
-  - Megvette az Oracle, és kevésbé fejlesztik
-  - A C.E. ingyenes, nyílt forráskódú, engedékeny
-  - Felváltotta a fork-ja, a MariaDB
+   - Megvette az Oracle, és kevésbé fejlesztik
+   - A C.E. ingyenes, nyílt forráskódú, engedékeny
+   - Felváltotta a fork-ja, a MariaDB
 
 Szóval ezek miatt döntöttünk a MariaDB mellett, ez szinte mindent tud, amit egy Oracle, ha nem valami nagyon durva banki rendszert akarok felhúzni (bár titkosítást támogat), a syntax is hasonló.
 Ha nem lett volna ez, akkor valószínüleg MySQL-t választottunk volna, bár erősen ügyelnek arra, hogy a kettő egymással kompatibilis legyen.
