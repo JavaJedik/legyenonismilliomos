@@ -6,7 +6,14 @@ Vágó István szeretne Legyen ön is milliomos játékot online játszani a Cov
 
 ### 2. Vágyálom rendszer
 
-A cél egy webes felület létrehozása Javascript segítségével, ami a kvízjátékot megvalósítva kommunikál a felhasználóval, ahol meg tud jelölni válaszokat, és visszajelzést kapni, hogy jó volt-e, mennyi választ adott.
+A cél egy webes felület létrehozása Javascript segítségével, ami a kvízjátékot megvalósítva kommunikál a felhasználóval, 
+ahol meg tud jelölni válaszokat, és visszajelzést kapni, hogy jó volt-e, mennyi választ adott.
+
+Játék izgalmasabbá tétele: 
+- Minél nehezebb kérdésnél jár a játékos, annál gyorsabb hanghatás bejátszása.
+- Háttérnek egy környezetbe illő kép.
+- Gombok színének a változtatása attól függően, hogy a játékos jó vagy rossz választ adott-e meg. 
+
 
 ### 3. Jelenlegi üzleti folyamatok
 
