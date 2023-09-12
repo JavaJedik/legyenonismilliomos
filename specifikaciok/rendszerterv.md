@@ -23,7 +23,8 @@
 
 
 ### Adatbázis terv
-TOMI MODELLJE KÉP
+
+![](../kepek/tamaskisprojectadatb.png)
 
 ### Implementációs terv
 
