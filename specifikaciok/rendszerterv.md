@@ -23,7 +23,17 @@
 
 
 ### Adatbázis terv
+
 ![](../kepek/tamaskisprojectadatb.png)
+
+Az adatbázis esetében kiemelten fontosnak tartjuk, hogy zéró redundancia legyen az adatok között, növelve a megbízhatóságot és a hitelességet. Ezért egy játék táblában nem tárolhatom azt, hogy meddig jutott el az illető, mert a játékban végbemenő szintek lebonyolitása egy másik tábla feladata, az pedig, hogy mennyit nyert, szintén nem tárolhatom, mert redundanciát okozna, ami viszont az adott nehézségi szint kérdéséhez tartozik. 
+
+Máshogy megfogalmazva arra vagyunk kíváncsiak, hogy adott játékos mennyi pénzt vitt haza az utolsó játékában. Ha a játékban tárolnám a nyereményt, akkor hibás lenne az adatbázis, mert ez az érték származtatható. Nézzük is meg.
+A játékos táblában rákeresünk az adott játékosra, ezt összekötjük a játék táblával, és dátum alapján szűrűnk az adott játékoshoz tartozó időben legközelebbi játékra. Ha ez megvan, akkor összekötjük a játékot a játékbeli kérdések táblával, és játék id alapján rákeresünk, hogy milyen kérdések hangzottak el. Itt tovább megyünk a kérdések táblára, ahol szerepel egy kérdés nehézségi szintje és az, hogy a válaszunk jó-e. Így meg tudjuk nézni egy feltételben, hogy jó választ adunk-e a legmagasabb szintű kérdésében és logikai vagy-gyal összekötve mondjuk azt, hogy a válasz a legnehezebb kérdésre helytelen, ezt összekötve logikai és-el a legmagasabb fix nyeremény, amit a kérdés jutalom táblából tudhatunk meg.
+
+Elsőre kicsit zavarosnak hangzik, de minden felesleges függőség és redundancia meg van szűntetve. Ez összességében bonyolultabbá teszi a lekérdezéseket, de sokkal biztonságosabbá, sokaldalúbbá, kevesebb adatot is igényel.
+
+Ezzel az adatbázissal képesek leszünk egy teljes játékot naplózva eltárolni, egészen attól, hogy milyen sorrendben jöttek a kérdések, milyen választ adott rá az illető, mikor,- és ki játszott, mennyi pénzt nyert stb. anélkül, hogy erről hosszú naplóüzeneteket vezetnénk, és tárolnánk egy külön adatbázisban, mindent lehet kérdezni. További igények nem merültek fel. 
 
 ### Implementációs terv
 
