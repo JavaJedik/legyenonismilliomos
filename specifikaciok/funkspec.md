@@ -60,6 +60,26 @@ Ezen kívül a kérdéseknek különböző nehézségi szintekkel kell rendelkez
 - Magyar vagy angol nyelven
 - Telefonról vagy PC-ről
 
+Játékos jó választ ad meg:
+
+- A játékos látja, hogy a pénznyeremény mutatója feljebb megy.
+- Dönthet, hogy elviszi a nyereményt, vagy tovább megy.
+- Automatikusan elviszi a pénzt, ha az utolsó kérdésre helyesen 
+adja a választ, illetve automatikusan tovább megy, 
+ha szakaszkérdést válaszolt meg helyesen.
+
+Játékos rossz választ ad meg:
+
+- A játékos látja, hogy mennyi pénzt visz el.
+- A játék kiírja a statisztikákat.
+- A játék főmenüjébe visszadobja a játékost.
+
+Játékos megnyeri a játékot:
+
+- Valami ünnepélyes felület, gratulációval.
+- Ha ezen túllép a játékos, akkor visszadobja a játékost a főmenübe.
+
+
 
 ### Képernyő tervek
 
