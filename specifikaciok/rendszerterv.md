@@ -137,6 +137,14 @@ jó láthatósággal működik-e (pl. 1280×720p [minimum támogatott felbontás
 A teszt tervezett időtartama egy hét.
 
 
+#### Release teszt:
+
+A szoftver bemutatásra kerül.
+A tesztelés alatt visszajelzéseket fogadnak a fejlesztők.
+Hiba, vagy változtatási kérelem esetén a fejlesztők a lehető leghamarabb javítják, módosítják a programot.
+A teszt időtartama a bemutatás órája.
+
+
 ### Telepítési terv
 
  - A szoftver webes felületéhez egy ajánlott böngésző telepítése szükséges (Google Chrome, Firefox, Opera, Safari), illetve egy olyan operációs rendszer használata, mely ezen böngészők legfrissebb verziójának futtatására képes. Ezen kívül egyéb szoftver nem szükséges a futtatáshoz.
