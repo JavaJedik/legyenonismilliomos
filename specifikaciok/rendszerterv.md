@@ -144,6 +144,7 @@ __Question__
 Metódusai:
 
  - *getQuestion* - string
+ - *getAnswers* - string
  - *isCorrectAnswer* - boolean
 
 Adattagjai:
@@ -162,6 +163,7 @@ Metódusai:
  - *usingHelpPhone()*
  - *usingHelpHalf()*
  - *usingHelpAudience()*
+ - *updatePlayerWinnings()*
 
 Adattagjai:
 
@@ -172,6 +174,7 @@ Adattagjai:
  - *helpPhone* - boolean
  - *helpHalf* - boolean
  - *helpAudience* - boolean
+ - *score* - integer
 
 
 ### 8. Architekturális terv
