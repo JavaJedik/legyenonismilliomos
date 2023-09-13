@@ -23,6 +23,7 @@ Projekt lebonyolítása:
 ### 3. Üzleti folyamatok modellje
 
 
+
 ### 4. Követelmények
 
 #### 4.1. Webes felület (responsive webdesign)
@@ -162,6 +163,11 @@ Ha nem lett volna ez, akkor valószínüleg MySQL-t választottunk volna, bár e
 
 
 ### 10. Implementációs terv
+
+Az alkalmazás implementálásánál törekszünk arra, hogy a lehető legfrissebb technológiákkal dolgozzunk:
+ - A frontend felületet React keretrendszerrel készítjük el, HTML, CSS és JavaScript nyelveken.
+ - A backend implementálásához Node.js-t használunk, amely segítségével kommunikál majd a szoftver az adatbázissal.
+ - Az alkalmazás és a felhasználó adatainak a tárolásához MariaDB relációs adatbázis-kezelő rendszert használunk.
 
 
 ### 11. Teszt terv
