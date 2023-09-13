@@ -22,7 +22,28 @@ Projekt lebonyolítása:
 
 ### 3. Üzleti folyamatok modellje
 
+**Cél:** A rendszer célja, hogy a felhasználó egy játékos kvíz alkalmazásban jutalmakért mérethesse meg a tudását, amely alapjait a Legyen Ön is Milliomos című tévés vetélkedő adja.
 
+**Résztvevők:**
+
+ - Felhasználók: A játékban résztvevő játékos.
+
+**Játék menete:**
+
+ - Játékos a kezdőképernyőről játékot indít.
+ - Játékos kap egy kérdést, majd négy válasz közül kell döntenie a helyes megfejtésről.
+ - Játékosnak lehetősége van segítséget kérni, minden körben egyszer használhatja ezeket fel:
+    - Telefonos segítség;
+    - Nézői segítség;
+    - Kérdések felezése;
+ - Játékos kiválaszt egy lehetséges választ.
+    - Helyes válasz esetén tovább mehet.
+    - Helytelen válasz esetén a játéknak vége. Ha van fix nyereménye, akkor azt elviheti.
+ 
+**Komponensek:**
+ - Frontend: A felhasználói felület.
+ - Backend: A szerveroldal, amely kapcsolatot tart a frontenddel és kezeli az üzleti logikát.
+ - Adatbázis: Az adatok tárolására és lekérdezésére szolgál.
 
 ### 4. Követelmények
 
