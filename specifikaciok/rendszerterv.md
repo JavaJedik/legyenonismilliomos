@@ -66,6 +66,30 @@ A szervernek:
 
 ### Fizikai környezet
 
+#### Felhasználói környezet:
+Az alkalmazás webes platforma készül. 
+Használatához szükséges a böngészők legfrissebb verziójának megléte.
+A webes felületnek köszönhetően használható lesz telefonos, illetve számítógépes környezetben is.
+
+#### Fejlesztői környezet:
+
+Kódolás:
+- VSCode (Microsoft)
+- Webstorm IDE (JetBrains)
+- NetBeans (Apache)
+
+Fájlok megosztása:
+- Google Drive
+
+Ábrák szerkesztése:
+- Paint
+- Draw.io
+
+Kommunikációs csatornák:
+- Facebook Messenger
+- Discord
+- Trello
+
 
 ### Absztrakt domain modell
 
