@@ -72,6 +72,12 @@ A szervernek:
 
 ### Architekturális terv
 
+![](../kepek/Usecase-diagram.png)
+
+Mobilra és számítógépre tervezzük kiadni a szoftvert.
+A játékost vizuálisan ki kell szolgálni attól függően, hogy a kijelzője függőleges vagy vízszintes tájolású.
+A játékban személyre kell tudni szabnia a játékosnak, hogy milyen nyelvű kérdéseket kapjon.
+
 
 ### Adatbázis terv
 
