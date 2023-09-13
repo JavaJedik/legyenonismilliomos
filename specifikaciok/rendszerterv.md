@@ -1,7 +1,9 @@
-### Rendszer célja
+# Rendszerterv
+
+### 1. Rendszer célja
 
 
-### Projekt terv
+### 2. Projekt terv
 
 Projekt lebonyolítása:
 
@@ -13,12 +15,13 @@ Projekt lebonyolítása:
 - A teszteket a backendhez Tomi írja.
 
 
-### Üzleti folyamatok modellje
+### 3. Üzleti folyamatok modellje
 
 
-### Követelmények
+### 4. Követelmények
 
-- webes felület (responsive webdesign)
+#### 4.1. Webes felület (responsive webdesign)
+
   - frameworks
     - REACT + HTML - javascript frontend
     - NODEJS - javascript backend
@@ -34,7 +37,9 @@ Projekt lebonyolítása:
       - ne tudja manipulálni az adatbázist és a kérdéseket
     - a rendszer naplozásában / adatbázisában kell tudni, hogy:
       - a játékos nem jelölt meg semmit, mert mondjuk elment a nete.
-- adatbázis (ingyenes, de mindent tudjon, szokásos hozzáállás)
+
+#### 4.2. Adatbázis (ingyenes, de mindent tudjon, szokásos hozzáállás)
+
   - Zéró redundancia és felesleges függőség
   - kérdések tárolása
     - válaszlehetőségek, helyes válasz
@@ -53,34 +58,38 @@ Projekt lebonyolítása:
     - hanyadik szintig jutott el
     - fix nyereménnyel kiszállt vagy bevállalós volt
     - mik voltak a kérdések, milyen válaszokat adott rá 
-- segítségek használata
+
+#### 4.3. Segítségek használata
+
   - három segítség megengedett
     - kérdésenként egy, játékonként egy fajtából egy
 
-### Funkcionális terv
+### 5. Funkcionális terv
 
-A felhasználónak:
+#### 5.1. A felhasználónak:
+
   - be kell tudni jelentkeznie
   - játékot kell tudni indítania
     - tudjon nyelvet váltani (játék előtt)
     - ki tudjon belőle szállni
     - kérdést tudjon megjelölni, visszajelzést kell kapnia
 
-A szervernek:
+#### 5.2. A szervernek:
+
   - react + html, css frontend, nodejs backend, MariaDB adatbázis
   - az egyes komponenseknek jól kell kommunikálnia egymással
   - a játék, játékos, rendszer minden folyamatát naplózni kell
   - folyamatosan futni kell, nem szabad random leállnia
 
 
-### Fizikai környezet
+### 6. Fizikai környezet
 
-#### Felhasználói környezet:
+#### 6.1. Felhasználói környezet:
 Az alkalmazás webes platforma készül. 
 Használatához szükséges a böngészők legfrissebb verziójának megléte.
 A webes felületnek köszönhetően használható lesz telefonos, illetve számítógépes környezetben is.
 
-#### Fejlesztői környezet:
+#### 6.2. Fejlesztői környezet:
 
 Kódolás:
 - VSCode (Microsoft)
@@ -100,10 +109,10 @@ Kommunikációs csatornák:
 - Trello
 
 
-### Absztrakt domain modell
+### 7. Absztrakt domain modell
 
 
-### Architekturális terv
+### 8. Architekturális terv
 
 ![](../kepek/Usecase-diagram.png)
 
@@ -112,7 +121,7 @@ A játékost vizuálisan ki kell szolgálni attól függően, hogy a kijelzője 
 A játékban személyre kell tudni szabnia a játékosnak, hogy milyen nyelvű kérdéseket kapjon.
 
 
-### Adatbázis terv
+### 9. Adatbázis terv
 
 ![](../kepek/tamaskisprojectadatb.png)
 
@@ -146,18 +155,19 @@ Számunkra nagyon fontos a jó skálázhatóság, az ingyenesség, megbízhatós
 Szóval ezek miatt döntöttünk a MariaDB mellett, ez szinte mindent tud, amit egy Oracle, ha nem valami nagyon durva banki rendszert akarok felhúzni (bár titkosítást támogat), a syntax is hasonló.
 Ha nem lett volna ez, akkor valószínüleg MySQL-t választottunk volna, bár erősen ügyelnek arra, hogy a kettő egymással kompatibilis legyen.
 
-### Implementációs terv
+
+### 10. Implementációs terv
 
 
-### Teszt terv
+### 11. Teszt terv
 
-Különböző böngészők tesztelése:
+#### 11.1. Különböző böngészők tesztelése:
 
 - *@veresviktor02* - Safari (WebKit)
 - *@egyiptomi425* - Brave (Blink)
 - *@pkristof1999* - Firefox (Gecko)
 
-Különböző operációs rendszerek tesztelése:
+#### 11.2. Különböző operációs rendszerek tesztelése:
 
 - *@veresviktor02* - MacOS Ventura (13)
 - *@egyiptomi425* - Ubuntu Linux 23.04
@@ -168,7 +178,7 @@ Teszteléseknél törekszünk arra, hogy minél több rendszeren,
 hogy a lehető legnagyobb tesztlefedettséggel tudjuk biztosítani a hibátlan szoftver működést.
 
 
-#### Béta teszt:
+#### 11.1. Béta teszt:
 
 A teszt célja a szoftver funkcióinak átfogó ellenőrzése különböző operációs rendszerek használatával és minél több fajta böngészővel.
 Teszteléskor ellenőrzésre kerül továbbá, hogy a szoftver minden főbb felbontáson hibátlanul, 
@@ -176,7 +186,7 @@ jó láthatósággal működik-e (pl. 1280×720p [minimum támogatott felbontás
 A teszt tervezett időtartama egy hét.
 
 
-#### Release teszt:
+#### 11.2. Release teszt:
 
 A szoftver bemutatásra kerül.
 A tesztelés alatt visszajelzéseket fogadnak a fejlesztők.
@@ -184,12 +194,13 @@ Hiba, vagy változtatási kérelem esetén a fejlesztők a lehető leghamarabb j
 A teszt időtartama a bemutatás órája.
 
 
-### Telepítési terv
+### 12. Telepítési terv
 
  - A szoftver webes felületéhez egy ajánlott böngésző telepítése szükséges (Google Chrome, Firefox, Opera, Safari), illetve egy olyan operációs rendszer használata, mely ezen böngészők legfrissebb verziójának futtatására képes. Ezen kívül egyéb szoftver nem szükséges a futtatáshoz.
  - A webszerverre közvetlenül az internetről kapcsolódnak rá a kliensek.
 
-### Karbantartási terv
+
+### 13. Karbantartási terv
 
  - Új kérdések hozzáadása, hibás/elavult kérdések javítása.
  - Jövőben felmerülő biztonsági hibák javítása.

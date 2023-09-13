@@ -1,4 +1,4 @@
-# Követelmény
+# Követelmény specifikáció
 
 ### 1. Jelenlegi helyzet
 

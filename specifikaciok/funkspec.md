@@ -1,4 +1,6 @@
-### Áttekintés
+# Funkcionális specifikáció
+
+### 1. Áttekintés
 
 Vágó István szeretne __Legyen Ön is milliomos__ játékot online játszani a Covid miatt, mert nem tudnak bemenni a stúdióba.
 *Javascript* nyelven szeretné lefejleszteni egy webes felületet, ahol az emberek tudnak játszani. 
@@ -14,7 +16,7 @@ hogy érdemes befektetni a fejlesztésbe, és arra számítunk,
 hogy széles közönséghez fog majd eljutni a szoftver.
 
 
-### Jelenlegi helyzet
+### 2. Jelenlegi helyzet
 
 15 kérdésre kell a játékosnak válaszolni a __*40 millió forintos főnyeremény*__ megszerzéséhez.
 
@@ -42,13 +44,13 @@ Ha a játékos eléri ezeket a pontokat, akkor utána a játékos hiába ad ross
 akkor az elért határért járó összeget viszi haza magával.
 A játékos bármikor kiszállhat a játékból és elviheti az adott összeget, de ilyenkor nem tudja a játékos, hogy mi lesz a következő kérdése.
 
-### Követelménylista
+### 3. Követelménylista
 
 - Egy adatbázis, amit konzisztensen lehet írni és olvasni.
 - Egy grafikus felület, amin interakciót hajthat végre a felhasználó.
 - Angol és magyar nyelv.
 
-### Jelenlegi üzleti folyamatok modellje
+### 4. Jelenlegi üzleti folyamatok modellje
 
 A nézők a tévében látott __Legyen Ön is milliomos__ műsor után szívesen játszanának maguk is egy ilyen játékon. 
 Mivel a műsorba a bejutás ritka, ezért szeretnénk elkészíteni egy mindenki számára elérhető __Legyen Ön is milliomos__ játékot, 
@@ -60,7 +62,7 @@ hogy a nagyobb nyereményekhez bonyolultabb kérdések megválaszolása legyen s
 A kérdésen belüli válaszok is random sorrendben jellennek meg, hogy ne legyen szabályszerűség arra, 
 hogy melyik választ érdemes megjelölni vagy ha netán máshonnan emlékszik rá a versenyző.
 
-### Igényelt üzleti folyamatok modellje
+### 5. Igényelt üzleti folyamatok modellje
 
 - Felhasználók nyomon követése.
 - Kérdések kiolvasása az adatbázisből.
@@ -69,12 +71,12 @@ hogy melyik választ érdemes megjelölni vagy ha netán máshonnan emlékszik r
 - Váltás a kérdések között.
 - Játék szakaszainak implementálása.
 
-### Használati esetek
+### 6. Használati esetek
 
 - Magyar vagy angol nyelven.
 - Telefonról vagy PC-ről.
 
-Játékos jó választ ad meg:
+#### 6.1. Játékos jó választ ad meg
 
 - A játékos látja, hogy a pénznyeremény mutatója feljebb megy.
 - Dönthet, hogy elviszi a nyereményt, vagy tovább megy.
@@ -82,30 +84,30 @@ Játékos jó választ ad meg:
 adja meg a választ, illetve automatikusan tovább megy, 
 ha szakaszkérdést válaszolt meg helyesen.
 
-Játékos rossz választ ad meg:
+#### 6.2. Játékos rossz választ ad meg
 
 - A játékos látja, hogy mennyi pénzt visz el.
 - A játék kiírja a statisztikákat.
 - A játék főmenüjébe visszadobja a játékost.
 
-Játékos megnyeri a játékot:
+#### 6.3. Játékos megnyeri a játékot
 
 - Valami ünnepélyes felület, gratulációval.
 - Ha ezen túllép a játékos, akkor visszadobja a játékost a főmenübe.
 
 
 
-### Képernyő tervek
+### 7. Képernyő tervek
 
-Számítógépes megjelenés:
+#### 7.1. Számítógépes megjelenés
 
 ![](../kepek/Milliomos-pc.png)
 
-Mobilos megjelenés:
+#### 7.2. Mobilos megjelenés
 
 ![](../kepek/milliomos-mobil.png)
 
-### Forgatókönyv
+### 8. Forgatókönyv
 
 A játékos elindítja a játékot, és kap egy kérdést 4 válaszlehetőséggel. 
 Igényelhet 3 segítséges bármikor. 
@@ -113,17 +115,21 @@ A játékos megjelöl egy kérdést, ha jól válaszol, továbbjut, és ez addig
 amíg ki nem száll vagy elront egy kérdést, ilyenkor a legelső fix jutalmat kapja meg. 
 Csalás azonnali kizárást eredményez.
 
-### Funkció - követelmény megfeleltetés
+### 9. Funkció - követelmény megfeleltetés
 
 Az elkészült program a megrendelő minden igényét kielégíti.
 
 
-### Fogalomszótár
+### 10. Fogalomszótár
 
-- [MVC modell:](https://hu.wikipedia.org/wiki/Modell-n%C3%A9zet-vez%C3%A9rl%C5%91) Összetett, 
-sok adatot a felhasználó elé táró számítógépes alkalmazásokban gyakori fejlesztői kívánalom az adathoz (modell) és a felhasználói felülethez (nézet) tartozó dolgok szétválasztása, 
+#### 10.1. [MVC modell:](https://hu.wikipedia.org/wiki/Modell-n%C3%A9zet-vez%C3%A9rl%C5%91) 
+
+Összetett, sok adatot a felhasználó elé táró számítógépes alkalmazásokban gyakori fejlesztői kívánalom az adathoz (modell) és a felhasználói felülethez (nézet) tartozó dolgok szétválasztása, 
 hogy a felhasználói felület ne befolyásolja az adatkezelést, és az adatok átszervezhetők legyenek a felhasználói felület változtatása nélkül. 
 A modell-nézet-vezérlő ezt úgy éri el, hogy elkülöníti az adatok elérését és az üzleti logikát az adatok 
 megjelenítésétől és a felhasználói interakciótól egy közbülső összetevő, a vezérlő bevezetésével.
-- Szakaszkérdés: Amikor a játékos megválaszolja ezt a kérdést, akkor attól a ponttól kezdve ez lesz az az összeg, 
+
+#### 10.2. Szakaszkérdés: 
+
+Amikor a játékos megválaszolja ezt a kérdést, akkor attól a ponttól kezdve ez lesz az az összeg, 
 amit haza visz, ha a továbbiakban helytelenül válaszol.
