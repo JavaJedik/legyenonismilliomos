@@ -2,6 +2,11 @@
 
 ### 1. Rendszer célja
 
+A rendszer célja, hogy a felhasználó egy játékos kvíz alkalmazásban jutalmakért mérethesse meg a tudását, amely alapjait a Legyen Ön is Milliomos című tévés vetélkedő adja.
+A játék szintekből épül fel, melyeken különböző nehézségű kérdésekre kell megfelelő választ adni négy lehetőség közül.
+Minden teljesített szint után növekszik a nyerhető díj, és bizonyos szintenként fix nyeremények is vannak, melyeket ha egyszer elért a játékos, akkor is megkap, ha egy későbbi kérdésnél rossz választ jelölne.
+A játékban lehetőség van segítségek használatára (telefonos, nézői és felezéses). Fontos, hogy a felhasználó jól átlássa a felületet, ezért minimalista és reszponzív dizájnnal fog elkészülni, hogy a lehető legtöbb kijelző felbontáson jól láthatóak legyenek a játék elemei.
+A szoftver - mivel böngészőben lehet majd játszani - megnyitható lesz bármely olyan okos eszközön, amely támogatja a legfrissebb számítógépes, illetve telefonos operációs rendszereket (pl. Windows 10 és frissebb,  Android 8.0 vagy iOS 10 és frissebbek) és böngészőket (pl.  Google Chrome v100 és frissebb).
 
 ### 2. Projekt terv
 
