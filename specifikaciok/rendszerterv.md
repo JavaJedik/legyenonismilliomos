@@ -3,6 +3,15 @@
 
 ### Projekt terv
 
+Projekt lebonyolítása:
+
+- A projekt kódolására egy hetet fogunk fordítani.
+- Az adatbázis megtervezése és kivitelezése, adatok feltöltése az adatbázisba Tomi  feladata lesz.
+- A frontend kódot Viktor és Kristóf írja.
+- A backend kódot Viktor, Kristóf és Tomi írja.
+- A teszteket a frontendhez Viktor és Kristóf írja.
+- A teszteket a backendhez Tomi írja.
+
 
 ### Üzleti folyamatok modellje
 
