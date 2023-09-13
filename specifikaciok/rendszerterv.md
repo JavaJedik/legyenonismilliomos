@@ -138,6 +138,41 @@ Kommunikációs csatornák:
 
 ### 7. Absztrakt domain modell
 
+Objektum:
+__Question__
+
+Metódusai:
+
+ - *getQuestion* - string
+ - *isCorrectAnswer* - boolean
+
+Adattagjai:
+
+ - *questionText* - string
+ - *answerGood* - string
+ - *answerBad1* - string
+ - *answerBad2* - string
+ - *answerBad3* - string
+
+Objektum:
+__Player__
+
+Metódusai:
+
+ - *usingHelpPhone()*
+ - *usingHelpHalf()*
+ - *usingHelpAudience()*
+
+Adattagjai:
+
+ - *name* - string
+ - *gender* - string
+ - *email* - string
+ - *registrationDate* - Date
+ - *helpPhone* - boolean
+ - *helpHalf* - boolean
+ - *helpAudience* - boolean
+
 
 ### 8. Architekturális terv
 
