@@ -1,13 +1,16 @@
-import React from 'react'
+import React from 'react';
+import './App.css';
 
-function App()
-{
-    reutrn
-    {
-        <div>
-        
-        </div>
-    }
+function App() {
+  const handleClick = () => {
+    alert('A gombra kattintottál!');
+  };
+
+  return (
+    <div className="App">
+      <button onClick={handleClick}>Kattints ide!</button>
+    </div>
+  );
 }
 
-export default App
+export default App;
