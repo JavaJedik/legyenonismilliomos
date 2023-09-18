@@ -16,7 +16,8 @@ Játék izgalmasabbá tétele:
 - Minél nehezebb kérdésnél jár a játékos, annál gyorsabb hanghatás bejátszása.
 - Háttérnek egy környezetbe illő kép.
 - Gombok színének a változtatása attól függően, hogy a játékos jó vagy rossz választ adott-e meg. 
-
+- Esetleges időzítő hozzáadása, ha szükséges, hogy stresszesebb legyen
+- Visszajelzés küldése arról, hogy milyen jól teljesítettünk
 
 ### 3. Jelenlegi üzleti folyamatok
 
@@ -24,7 +25,8 @@ Játék izgalmasabbá tétele:
 - Rossz válasz esetén: elveszti a játékos a játékot.
 - Adott pontokon a játékos megállhat és elviheti a megnyert pénzt.
 - Válasz megjelölése.
-
+- Visszajelzés adása a válasz helyességéről.
+- Kliens-szerver modell összehangolt működése.
 
 ### 4. Igényelt üzleti folyamatok
 
