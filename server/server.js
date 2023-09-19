@@ -1,12 +1,36 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const mysql = require('mysql');
+const app = express();
 
-app.get("/", (req, res) => 
+const connection = mysql.createConnection
+({
+  host: 'localhost',
+  user: 'root', // Change if you dont need root permissions
+  password: '9999', // It is just an example
+  database: 'milliomos'
+});
+
+connection.connect(err => 
 {
-    res.send("Üdvözöllek a szerveren!");
-})
-    
-app.listen(5000, () => 
+  if (err) 
+  {
+    console.error('Hiba a MariaDB adatbázishoz való csatlakozás során: ' + err.stack);
+    return;
+  }
+  console.log('Sikeresen csatlakozva a MySQL adatbázishoz');
+});
+
+app.get('/player', (req, res) => 
 {
-    console.log("Server started on port 5000");
+  connection.query('SELECT * FROM player', (err, results) => 
+  {
+    if (err) throw err;
+    res.json(results);
+  });
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => 
+{
+  console.log(`A szerver fut a ${PORT}-es porton`);
 });

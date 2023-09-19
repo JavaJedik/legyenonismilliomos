@@ -1,8 +1,16 @@
 {
     "name": "legyen_on_is_milliomos",
     "version": "1.0.0",
-    "keywords": ["util", "functional", "server", "client", "browser"],
+    "keywords": [
+        "util",
+        "functional",
+        "server",
+        "client",
+        "browser"
+    ],
     "author": "kecyke",
     "contributors": [],
-    "dependencies": {}
+    "dependencies": {
+        "mysql2": "^3.6.1"
+    }
 }
