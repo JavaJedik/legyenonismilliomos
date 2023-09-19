@@ -1,18 +1,17 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Login from './components/Login.js';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Login from './components/Login';
+import './App.css'; 
 
-function App() 
-{
-  return 
-  (
-    <Router>
-      <Switch>
-        <Route path="/login" component={Login} />
-        {/* Egyéb útvonalak és komponensek */}
-      </Switch>
-    </Router>
+const App = () => {
+  return (
+    <BrowserRouter>
+      <div>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
