@@ -3,13 +3,13 @@ import './App.css';
 
 function App() {
   const handleClick = () => {
-    alert('A gombra kattintottál!');
+	alert('A gombra kattintottál!');
   };
 
   return (
-    <div className="App">
-      <button onClick={handleClick}>Kattints ide!</button>
-    </div>
+	<div className="App">
+	  <button onClick={handleClick}>Kattints ide!</button>
+	</div>
   );
 }
 
