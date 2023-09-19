@@ -1,15 +1,20 @@
 import React from 'react';
 import './App.css';
 
-function App() {
-  const handleClick = () => {
-	alert('A gombra kattintottál!');
-  };
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Login from './components/Login';
 
-  return (
-	<div className="App">
-	  <button onClick={handleClick}>Kattints ide!</button>
-	</div>
+function App() 
+{
+  return 
+  (
+    <Router>
+      <Switch>
+        <Route path="/login" component={Login} />
+        {/* Egyéb útvonalak és komponensek */}
+      </Switch>
+    </Router>
   );
 }
 
