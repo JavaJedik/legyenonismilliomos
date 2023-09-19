@@ -1,0 +1,21 @@
+input {
+    background: white;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    border: thin solid grey;
+    border-radius: 0.5em;
+}
+
+input:hover {
+    border: thin solid cyan;
+}
+
+button {
+    background: chartreuse;
+    text-align: center;
+    border: none;
+    padding: 5px;
+    font-size: 1rem;
+    font-family: "Times New Roman";
+}

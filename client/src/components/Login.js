@@ -1,12 +1,15 @@
 import React from 'react';
+import './Login.css';
 
 const Login = () => {
-  return (
-    <div>
-      <h2>Üdvözöllek a bejelentkezési oldalon!</h2>
-      <p>Itt lehet majd bejelentkezni a játékhoz.</p>
-    </div>
-  );
+    return (
+        <div>
+            <input type="text" placeholder="Felhasználónév" id="username"/>
+            <input type="text" placeholder="Jelszó" id="password"/>
+
+            <button>Kattints ide!</button>
+        </div>
+    );
 }
 
 export default Login;
