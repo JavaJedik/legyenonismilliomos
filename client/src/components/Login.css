@@ -8,34 +8,31 @@ body {
     height: 100vh;
 }
 
-h1 {
-    padding: 0.2em;
-    background: #a0a0a0;
-    cursor: default;
-}
-
 input {
     background: white;
-    width: 10em;
+    width: 20em;
     height: 2.5em;
-    margin: 0.5em;
+    margin: 0.25em;
     border: thin solid grey;
-    border-radius: 0.5em;
+    border-radius: 15px;
     transition-duration: 0.8s;
+    text-align: center;
 }
 
 input:hover {
-    border: thin solid cyan;
-    background: yellow;
+    border: thin solid dodgerblue;
+    background: rgb(185, 197, 246);
 }
 
 button {
     background: white;
     text-align: center;
-    margin: 0.5em;
-    border: medium solid chartreuse;
-    border-radius: 0.25em;
-    width: 100px;
+    margin: 0.25em;
+    border: medium solid rgb(185, 197, 246);
+    border-radius: 15px;
+    transition-duration: 0.8s;
+    width: 8.25em;
+    height: 2.25em;
     padding: 5px;
     font-size: 1rem;
     font-family: "Times New Roman";
@@ -43,11 +40,48 @@ button {
 }
 
 button:hover {
-    background: chartreuse;
-    transition-duration: 1.2s;
+    background: rgb(185, 197, 246);
 }
 
 button:active {
     transform: scale(0.85);
     transition-duration: 0.3s;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 28%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.blur-container {
+    background-color: rgba(70, 89, 171, 0.5);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+    height: 28%;
+    border-radius: 25px;
+    z-index: 0;
+}
+
+.content {
+    position: relative;
+    margin: 10px 0;
+}
+
+.content-bottom {
+    color: whitesmoke;
+    font-size: 1.25em;
+    position: relative;
 }

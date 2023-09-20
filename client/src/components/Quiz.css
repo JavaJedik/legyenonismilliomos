@@ -5,30 +5,26 @@ body {
     height: 100vh;
 }
 
-h1 {
-    width: 100vw;
-    margin: 0;
-    padding: 0.1em;
-    text-align: center;
-    background: yellow;
-    font-family: "Times New Roman";
-    font-size: 3em;
-    letter-spacing: 0.3em;
-}
-
 table {
     position: absolute;
+    background-color: rgba(70, 89, 171, 0.5);
+    backdrop-filter: blur(20px);
+    width: 20%;
+    height: 70.5%;
+    margin: 1em;
+    top: 1%;
     right: 0;
-    background: brown;
-    margin: 2em;
     border-spacing: 0;
     cursor: default;
+    border-radius: 25px;
+    text-align: center;
 }
 
-thead {
+th {
     font-size: 2em;
     border-bottom: thin solid black;
-    margin: 0;
+    padding: 0.5em;
+    color: whitesmoke;
 }
 
 td {
@@ -36,61 +32,150 @@ td {
     border-bottom: thin solid black;
     margin: 0;
     font-size: 1.25em;
+    color: whitesmoke;
+}
+
+.bottom-cell {
+    border-bottom: none;
 }
 
 .fix-prize {
     background: yellow;
+    color: black;
+}
+
+.blur-quiz-background {
+    position: absolute;
+    top: 20%;
+    margin: 2em;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(70, 89, 171, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    z-index: 0;
 }
 
 .quiz {
     position: absolute;
-    bottom: 0;
+    top: 20%;
     margin: 2em;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    width: 40vw;
-    height: 30vh;
-    background: blue;
+    width: 50%;
+    height: 50%;
     text-align: center;
+    z-index: 1;
 }
 
 .question {
-    align-self: baseline;
-    width: inherit;
-    height: 3em;
-    background: aquamarine;
-    margin: 0.5em;
-    border-radius: 0.5em;
+    position: relative;
+    width: 50em;
+    height: 12em;
+    background-color: rgb(29, 42, 114);
+    margin: 1em;
+    border-radius: 20px;
+    color: whitesmoke;
+    border-style: solid;
+    border-width: 1px;
+    border-color: whitesmoke;
+}
+
+.answer-table {
+    backdrop-filter: none;
+    background: none;
+    border-spacing: 1em;
+    position: relative;
+    width: 52em;
+    height: 10em;
 }
 
 .answer {
-    width: 40%;
-    height: 3em;
-    background: chartreuse;
-    margin: 0.5em;
-    border-radius: 0.5em;
+    position: relative;
+    color: white;
+    width: inherit;
+    height: inherit;
+    background: #6a78c9;
+    margin: 1em;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: whitesmoke;
+}
+
+.blur-helps-background {
+    position: absolute;
+    background-color: rgba(70, 89, 171, 0.5);
+    backdrop-filter: blur(20px);
+    width: 20%;
+    height: 50%;
+    margin: 1em;
+    top: 21.5%;
+    left: 0;
+    border-spacing: 0;
+    cursor: default;
+    border-radius: 25px;
+    text-align: center;
 }
 
 .helps {
     position: absolute;
+    top: 21.5%;
     left: 0;
-    margin: 2em;
-    width: 20em;
-    height: 30em;
+    margin: 1em;
+    width: 20%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    background: blue;
     align-items: center;
 }
 
 
 .help {
-    background: chartreuse;
+    position: relative;
+    color: white;
     width: 10em;
-    height: 3em;
+    height: 5em;
     text-align: center;
+    background: #6a78c9;
+    margin: 1em;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: whitesmoke;
+}
+
+.blur-header {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 15%;
+    z-index: 0;
+    background-color: rgba(70, 89, 171, 0.5);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+}
+
+.header {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    padding: 0.1em;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 0.3em;
+    border-radius: 25px;
+    color: whitesmoke;
+    font-family: "Times New Roman";
 }

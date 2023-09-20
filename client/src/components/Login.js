@@ -35,24 +35,36 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Jelentkezz be a játékba a kezdéshez!</h1>
-      <input
-        type="text"
-        placeholder="Felhasználónév"
-        id="username"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Jelszó"
-        id="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={navigateQuiz}>Bejelentkezés</button>
-    </div>
+    <body>
+        <div className = "blur-container"></div>
+            <div className = "container">
+                <div className = "content">
+                    <input
+                        type="text"
+                        placeholder="Felhasználónév"
+                        id="username"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                <div className = "content">
+                    <input
+                        type="password"
+                        placeholder="Jelszó"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+                </div>
+                <div className = "content">
+                    <button onClick={navigateQuiz}>Bejelentkezés</button>
+                    <button>Regisztráció</button>
+                </div>
+                <div className = "content-bottom">
+                    <p>Jelentkezz be, vagy regisztrálj a kezdéshez!</p>
+                </div>
+            </div>
+        </div>
+    </body>
   );
 };
 
