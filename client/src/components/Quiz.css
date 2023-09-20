@@ -1,0 +1,71 @@
+body {
+    background-image: url("hatter.png");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+h1 {
+    width: 100vw;
+    margin: 0;
+    padding: 0.1em;
+    text-align: center;
+    background: yellow;
+    font-family: "Times New Roman";
+    font-size: 3em;
+    letter-spacing: 0.3em;
+}
+
+table {
+    background: brown;
+    margin: 0;
+    border-spacing: 0;
+    cursor: default;
+}
+
+thead {
+    font-size: 2em;
+    border-bottom: thin solid black;
+}
+
+td {
+    border-top: thin solid black;
+    border-bottom: thin solid black;
+    margin: 0;
+    font-size: 1.25em;
+}
+
+.fix-prize {
+    background: yellow;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 40vw;
+    height: 30vh;
+    background: blue;
+
+
+    text-align: center;
+}
+
+.question {
+    align-self: baseline;
+    width: inherit;
+    height: 3em;
+    background: aquamarine;
+    margin: 0.5em;
+    border-radius: 0.5em;
+}
+
+.answer {
+    width: 40%;
+    height: 3em;
+    background: chartreuse;
+    margin: 0.5em;
+    border-radius: 0.5em;
+}
