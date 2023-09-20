@@ -1,7 +1,16 @@
 import React from 'react';
+import {useNavigate} from "react-router-dom";
 import './Login.css';
 
+
+
 const Login = () => {
+    const navigate = useNavigate()
+
+    const navigateQuiz = () => {
+        navigate("/Quiz");
+    }
+
     return (
         <body>
             <h1>Jelentkezz be a játékba a kezdéshez!</h1>
@@ -9,7 +18,7 @@ const Login = () => {
             <input type="text" placeholder="Felhasználónév" id="username"/>
             <input type="text" placeholder="Jelszó" id="password"/>
 
-            <button>Kattints ide!</button>
+            <button onClick={navigateQuiz}>Kattints ide!</button>
         </body>
     );
 }
