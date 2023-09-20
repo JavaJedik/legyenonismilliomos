@@ -17,8 +17,10 @@ h1 {
 }
 
 table {
+    position: absolute;
+    right: 0;
     background: brown;
-    margin: 0;
+    margin: 2em;
     border-spacing: 0;
     cursor: default;
 }
@@ -26,6 +28,7 @@ table {
 thead {
     font-size: 2em;
     border-bottom: thin solid black;
+    margin: 0;
 }
 
 td {
@@ -40,6 +43,9 @@ td {
 }
 
 .quiz {
+    position: absolute;
+    bottom: 0;
+    margin: 2em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -48,8 +54,6 @@ td {
     width: 40vw;
     height: 30vh;
     background: blue;
-
-
     text-align: center;
 }
 
@@ -68,4 +72,25 @@ td {
     background: chartreuse;
     margin: 0.5em;
     border-radius: 0.5em;
+}
+
+.helps {
+    position: absolute;
+    left: 0;
+    margin: 2em;
+    width: 20em;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: blue;
+    align-items: center;
+}
+
+
+.help {
+    background: chartreuse;
+    width: 10em;
+    height: 3em;
+    text-align: center;
 }

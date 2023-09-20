@@ -8,7 +8,7 @@ const Quiz = () => {
                 <h1>Legyen Ön is milliomos!</h1>
             </div>
 
-            <div>
+            <div class="ne-vedd-ki-a-divet-mert-elrontja-a-poziciojat">
                 <table>
                     <thead>Nyeremény:</thead>
                     <tr class="fix-prize">
@@ -59,6 +59,21 @@ const Quiz = () => {
                 </table>
             </div>
 
+            <div class="ne-vedd-ki-a-divet-mert-elrontja-a-poziciojat">
+                <div class="helps">
+                    <div class="help">
+                        <p>help 1</p>
+                    </div>
+                    <div class="help">
+                        <p>help 2</p>
+                    </div>
+                    <div class="help">
+                        <p>help 3</p>
+                    </div>
+                </div>
+            </div>
+
+
             <div class="quiz">
                 <div class="question">
                     <p>question</p>
@@ -76,6 +91,7 @@ const Quiz = () => {
                     <p>answer 4</p>
                 </div>
             </div>
+
         </body>
     );
 }
