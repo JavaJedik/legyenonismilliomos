@@ -66,12 +66,15 @@ const Quiz = () => {
             <div className="helps">
                 <div className="help">
                     <p>help 1</p>
+                    <div className="half" />
                 </div>
                 <div className="help">
                     <p>help 2</p>
+                    <div className="phone" />
                 </div>
                 <div className="help">
                     <p>help 3</p>
+                    <div className="audience" />
                 </div>
             </div>
         </div>
