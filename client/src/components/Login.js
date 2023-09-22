@@ -26,7 +26,8 @@ const Login = () => {
       })
       .then((data) => {
         if (data.success) {
-          navigate('/home'); // Navigálj a Home oldalra a sikeres bejelentkezés után
+          localStorage.setItem('accessToken', data.accessToken);
+          navigate('/home');
         } else {
           alert('Sikertelen bejelentkezés. Rossz felhasználónév vagy jelszó.');
         }
@@ -36,43 +37,38 @@ const Login = () => {
 
   return (
     <body>
-        <div className = "blur-container"></div>
-            <div className = "container">
-                <div className = "content">
-                    <input
-                        className= "input-field"
-                        type="text"
-                        placeholder="Felhasználónév"
-                        id="username"
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                </div>
-                <div className = "content">
-                    <input
-                        className= "input-field"
-                        type="password"
-                        placeholder="Jelszó"
-                        id="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <div className = "content">
-                    <button
-                        className= "button-style"
-                        onClick={navigateHome}>
-                        Bejelentkezés
-                    </button>
-                    <button
-                        className= "button-style">
-                        Regisztráció
-                    </button>
-                </div>
-                <div>
-                    <p className = "content-bottom">Jelentkezz be, vagy regisztrálj a kezdéshez!</p>
-                </div>
-            </div>
+      <div className="blur-container"></div>
+      <div className="container">
+        <div className="content">
+          <input
+            className="input-field"
+            type="text"
+            placeholder="Felhasználónév"
+            id="username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+        </div>
+        <div className="content">
+          <input
+            className="input-field"
+            type="password"
+            placeholder="Jelszó"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="content">
+          <button className="button-style" onClick={navigateHome}>
+            Bejelentkezés
+          </button>
+          <button className="button-style">Regisztráció</button>
+        </div>
+        <div>
+          <p className="content-bottom">Jelentkezz be, vagy regisztrálj a kezdéshez!</p>
+        </div>
+      </div>
     </body>
   );
 };
