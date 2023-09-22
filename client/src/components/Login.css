@@ -93,60 +93,22 @@ body {
 
 @media (max-width: 1200px) {
     .input-field {
-        position: relative;
-        background: whitesmoke;
         width: 10em;
-        height: 2em;
-        margin: 0.15em;
-        border: thin solid grey;
-        border-radius: 15px;
-        transition-duration: 0.8s;
-        text-align: center;
     }
 
     .button-style {
-        background: whitesmoke;
-        text-align: center;
-        margin: 0.25em;
-        border: medium solid rgb(185, 197, 246);
-        border-radius: 15px;
-        transition-duration: 0.8s;
         width: 6em;
-        height: 2em;
-        padding: 5px;
-        cursor: pointer;
     }
 
     .container {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 20em;
-        height: 20em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
     }
 
     .blur-container {
-        background-color: rgba(70, 89, 171, 0.5);
-        backdrop-filter: blur(20px);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 20em;
-        height: 20em;
-        border-radius: 25px;
-        z-index: 0;
     }
+
     .content-bottom {
-        color: whitesmoke;
         font-size: 1rem;
-        position: relative;
-        text-align: center;
     }
 }
