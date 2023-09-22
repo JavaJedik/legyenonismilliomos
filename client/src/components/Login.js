@@ -18,23 +18,18 @@ const Login = () => {
         password,
       }),
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
+      .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          localStorage.setItem('accessToken', data.accessToken);
-          navigate('/home');
+          localStorage.setItem('token', data.token); // Elmentjük a tokent a localStorage-ben
+          navigate('/home'); // Navigálj a Home oldalra a sikeres bejelentkezés után
         } else {
           alert('Sikertelen bejelentkezés. Rossz felhasználónév vagy jelszó.');
         }
       })
       .catch((error) => console.error('Fetch error:', error));
   };
-
+  
   const navigateRegister = () => {
     navigate("/register");
   };

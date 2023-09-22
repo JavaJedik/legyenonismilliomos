@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const router = express.Router();
 const db = require('../db');
+const jwt = require('jsonwebtoken');
 
 router.use(cors());
 
@@ -21,11 +22,17 @@ router.post('/', (req, res) => {
     }
 
     if (results.length > 0) {
-      return res.json({ success: true, message: 'Bejelentkezés sikeres' });
+      const user = { username }; // Felhasználói adatok
+      const token = generateToken(user); // Generáljuk a tokent
+      return res.json({ success: true, message: 'Bejelentkezés sikeres', token });
     } else {
       return res.status(401).json({ success: false, message: 'Nem megfelelő felhasználónév vagy jelszó' });
     }
   });
 });
+
+const generateToken = (user) => {
+  return jwt.sign(user, process.env.TOKEN_SECRET, { expiresIn: '24h' });
+};
 
 module.exports = router;
