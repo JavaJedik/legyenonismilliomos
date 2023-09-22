@@ -4,6 +4,7 @@ import Login from './components/Login';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
 import Register from "./components/Register";
+import Leaderboard from "./components/Leaderboard";
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(localStorage.getItem('token'));
@@ -32,6 +33,7 @@ const App = () => {
             element={authenticated ? <Quiz /> : <Navigate to="/login" />}
           />
           <Route path="/register" element={<Register />} />
+          <Route path="/leaderboard" element={<Leaderboard />} />
         </Routes>
       </div>
     </BrowserRouter>

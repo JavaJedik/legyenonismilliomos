@@ -23,6 +23,10 @@ const Home = () => {
       navigate("/quiz");
   };
 
+  const navigateLeaderboard = () => {
+      navigate("/leaderboard");
+  }
+
   const handleDropdownItemClick = (item) => {
       setSelectedItem(item);
   };
@@ -48,7 +52,8 @@ const Home = () => {
           </div>
           <div>
               <button
-                  className= "home-button-style">
+                  className= "home-button-style"
+                  onClick={navigateLeaderboard}>
                   Toplista megtekintése
               </button>
           </div>
