@@ -7,7 +7,7 @@ const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const navigateQuiz = () => {
+  const navigateHome = () => {
     fetch('http://localhost:2000/login', {
       method: 'POST',
       headers: {
@@ -26,7 +26,7 @@ const Login = () => {
       })
       .then((data) => {
         if (data.success) {
-          navigate('/quiz');
+          navigate('/home'); // Navigálj a Home oldalra a sikeres bejelentkezés után
         } else {
           alert('Sikertelen bejelentkezés. Rossz felhasználónév vagy jelszó.');
         }
@@ -56,7 +56,7 @@ const Login = () => {
                     />
                 </div>
                 <div className = "content">
-                    <button onClick={navigateQuiz}>Bejelentkezés</button>
+                    <button onClick={navigateHome}>Bejelentkezés</button>
                     <button>Regisztráció</button>
                 </div>
                 <div className = "content-bottom">
