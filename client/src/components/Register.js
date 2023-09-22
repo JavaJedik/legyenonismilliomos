@@ -10,10 +10,6 @@ const Register = () => {
         navigate("/login");
     };
 
-    function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-    }
-
     window.onclick = function(event) {
         if (!event.target.matches('.dropbtn')) {
             let dropdowns = document.getElementsByClassName("dropdown-content");
@@ -29,7 +25,7 @@ const Register = () => {
 
     return (
         <body>
-        <div className = "reg-blur-container"></div>
+            <div className = "reg-blur-container"></div>
             <div className = "reg-container">
                 <div className = "content">
                     <input
@@ -65,14 +61,13 @@ const Register = () => {
                 </div>
                 <div className="dropdown">
                     <button
-                        onClick={myFunction()}
                         className="dropbtn">
                         Adja meg a nemét!
                     </button>
                     <div id="myDropdown" className="dropdown-content">
-                        <p>1</p>
-                        <p>2</p>
-                        <p>3</p>
+                        <p>Férfi</p>
+                        <p>Nő</p>
+                        <p>Most nem válaszolnék</p>
                     </div>
                 </div>
                 <div className = "content">
