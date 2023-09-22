@@ -21,8 +21,8 @@ const Login = () => {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          localStorage.setItem('token', data.token); // Elmentjük a tokent a localStorage-ben
-          navigate('/home'); // Navigálj a Home oldalra a sikeres bejelentkezés után
+          localStorage.setItem('token', data.token);
+          navigate('/home');
         } else {
           alert('Sikertelen bejelentkezés. Rossz felhasználónév vagy jelszó.');
         }
