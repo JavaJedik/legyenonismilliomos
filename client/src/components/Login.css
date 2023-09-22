@@ -15,7 +15,7 @@ body {
 
 .input-field {
     position: relative;
-    background: white;
+    background: whitesmoke;
     width: 20em;
     height: 2em;
     margin: 0.15em;
@@ -31,7 +31,7 @@ body {
 }
 
 .button-style {
-    background: white;
+    background: whitesmoke;
     text-align: center;
     margin: 0.25em;
     border: medium solid rgb(185, 197, 246);
@@ -94,7 +94,7 @@ body {
 @media (max-width: 1200px) {
     .input-field {
         position: relative;
-        background: white;
+        background: whitesmoke;
         width: 10em;
         height: 2em;
         margin: 0.15em;
@@ -105,7 +105,7 @@ body {
     }
 
     .button-style {
-        background: white;
+        background: whitesmoke;
         text-align: center;
         margin: 0.25em;
         border: medium solid rgb(185, 197, 246);
