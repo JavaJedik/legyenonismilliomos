@@ -35,6 +35,10 @@ const Login = () => {
       .catch((error) => console.error('Fetch error:', error));
   };
 
+  const navigateRegister = () => {
+    navigate("/register");
+  };
+
   return (
     <body>
       <div className="blur-container"></div>
@@ -60,10 +64,16 @@ const Login = () => {
           />
         </div>
         <div className="content">
-          <button className="button-style" onClick={navigateHome}>
+          <button
+              className= "button-style"
+              onClick={navigateHome}>
             Bejelentkezés
           </button>
-          <button className="button-style">Regisztráció</button>
+          <button
+              className= "button-style"
+              onClick={navigateRegister}>
+            Regisztráció
+          </button>
         </div>
         <div>
           <p className="content-bottom">Jelentkezz be, vagy regisztrálj a kezdéshez!</p>
