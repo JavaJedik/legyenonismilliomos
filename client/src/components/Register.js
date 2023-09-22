@@ -1,27 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
 import './Login.css';
 
 const Register = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+    const [selectedItem, setSelectedItem] = useState(null);
 
     const navigateLogin = () => {
         navigate("/login");
     };
 
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropbtn')) {
-            let dropdowns = document.getElementsByClassName("dropdown-content");
-            let i;
-            for (i = 0; i < dropdowns.length; i++) {
-                let openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
-    }
+    const handleDropdownItemClick = (item) => {
+        setSelectedItem(item);
+    };
 
     return (
         <body>
@@ -62,12 +54,14 @@ const Register = () => {
                 <div className="dropdown">
                     <button
                         className="dropbtn">
-                        Adja meg a nemét!
+                        {selectedItem || "Adja meg a nemét!"}
                     </button>
-                    <div id="myDropdown" className="dropdown-content">
-                        <p>Férfi</p>
-                        <p>Nő</p>
-                        <p>Most nem válaszolnék</p>
+                    <div id="myDropdown">
+                        <div className="dropdown-content">
+                            <p onClick={() => handleDropdownItemClick("Most nem válaszolnék")}>Most nem válaszolnék</p>
+                            <p onClick={() => handleDropdownItemClick("Férfi")}>Férfi</p>
+                            <p onClick={() => handleDropdownItemClick("Nő")}>Nő</p>
+                        </div>
                     </div>
                 </div>
                 <div className = "content">

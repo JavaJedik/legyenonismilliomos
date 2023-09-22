@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './components/Home';
 import Quiz from './components/Quiz';
+import Register from "./components/Register";
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(localStorage.getItem('token'));
@@ -29,6 +30,7 @@ const App = () => {
             path="/quiz"
             element={authenticated ? <Quiz /> : <Navigate to="/login" />}
           />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </BrowserRouter>
