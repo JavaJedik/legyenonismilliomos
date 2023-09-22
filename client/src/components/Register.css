@@ -25,6 +25,10 @@
     z-index: 0;
 }
 
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 @media (max-width: 1200px) {
     .reg-container {
         position: absolute;
@@ -52,4 +56,41 @@
         border-radius: 25px;
         z-index: 0;
     }
+}
+
+.dropbtn {
+    position: relative;
+    background: white;
+    color: #6e6e6e;
+    width: 20.25em;
+    height: 2.25em;
+    border: thin solid grey;
+    border-radius: 15px;
+    transition-duration: 0.8s;
+    text-align: center;
+    cursor: pointer;
+    margin: 1em;
+}
+
+.dropbtn:hover {
+    border: thin solid dodgerblue;
+    background: rgb(185, 197, 246);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-list-item;
+    text-align: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 20.25em;
+    height: 6.75em;
+    margin: 0 1em;
+    border-radius: 15px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
