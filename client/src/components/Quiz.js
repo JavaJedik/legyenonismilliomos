@@ -22,7 +22,7 @@ const Quiz = () => {
         <body>
         <div className = "blur-header"></div>
         <div className = "header">
-            <h1>Legyen Ön is milliomos!</h1>
+            <div className="title">Legyen Ön is milliomos!</div>
         </div>
 
         <div className = "blur-winnings-table"></div>
@@ -81,15 +81,15 @@ const Quiz = () => {
             <div className="blur-helps-background"></div>
             <div className="helps">
                 <div className="help">
-                    <p>help 1</p>
+                    <p>Felezés</p>
                     <div className="half" />
                 </div>
                 <div className="help">
-                    <p>help 2</p>
+                    <p>Telefonálás</p>
                     <div className="phone" />
                 </div>
                 <div className="help">
-                    <p>help 3</p>
+                    <p>Közönség</p>
                     <div className="audience" />
                 </div>
             </div>
@@ -98,7 +98,7 @@ const Quiz = () => {
         <div className = "blur-quiz-background"></div>
         <div className="quiz">
             <div className="question">
-                <p>question</p>
+                <div className="question-text">question</div>
             </div>
             <table className="answer-table">
                 <tr>
@@ -112,8 +112,11 @@ const Quiz = () => {
             </table>
         </div>
 
+        <button className="stop">Álljunk meg, Vágó Úr</button>
+        <button className="next">Menjünk tovább, Vágó Úr</button>
+
         </body>
     );
 }
 
-export default Home;
+export default Quiz;

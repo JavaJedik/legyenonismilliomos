@@ -84,6 +84,11 @@ td {
     border-color: whitesmoke;
 }
 
+.question-text {
+    margin: 0.5em 1em;
+    font-size: 2em;
+}
+
 .answer-table {
     backdrop-filter: none;
     background: none;
@@ -140,14 +145,15 @@ td {
     position: relative;
     color: white;
     width: 10em;
-    height: 5em;
+    height: 10em;
     text-align: center;
     background: #6a78c9;
-    margin: 1em;
+    margin: 0.5em;
     border-radius: 20px;
     border-style: solid;
     border-width: 2px;
     border-color: whitesmoke;
+    cursor: pointer;
 }
 
 .blur-header {
@@ -182,6 +188,12 @@ td {
     font-family: "Times New Roman";
 }
 
+.title {
+    margin: auto;
+    margin-left: 0.7em;
+    font-size: 1.5em;
+}
+
 .half:before {
     content: url("helps/5050.png");
 }
@@ -192,4 +204,44 @@ td {
 
 .audience:before {
     content: url("helps/audience.png");
+}
+
+.stop, .next {
+    width: 12em;
+    height: 4em;
+    position: absolute;
+    bottom: 10vh;
+    margin: 1em;
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: whitesmoke;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.8s;
+}
+
+.stop {
+    left: 30vw;
+    background: rgba(255, 0, 0, 0.6);
+}
+
+.next {
+    right: 30vw;
+    background: rgba(127, 255, 0, 0.6);
+}
+
+.stop:active, .next:active {
+    transform: scale(0.85);
+    transition-duration: 0.3s;
+}
+
+.stop:hover {
+    background: rgba(255, 0, 0, 0.9);
+    transition-duration: 2.5s;
+}
+
+.next:hover {
+    background: rgba(127, 255, 0, 0.9);
+    transition-duration: 2.5s;
 }
