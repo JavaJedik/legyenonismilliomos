@@ -46,6 +46,7 @@ const Login = () => {
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
                     />
+                </div>
                 <div className = "content">
                     <input
                         type="password"
@@ -63,7 +64,6 @@ const Login = () => {
                     <p>Jelentkezz be, vagy regisztrálj a kezdéshez!</p>
                 </div>
             </div>
-        </div>
     </body>
   );
 };
