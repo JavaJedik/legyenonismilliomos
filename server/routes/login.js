@@ -3,6 +3,13 @@ const cors = require('cors');
 const router = express.Router();
 const db = require('../db');
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
+
+const generateRandomKey = () => {
+  return crypto.randomBytes(64).toString('hex');
+};
+
+const TOKEN_SECRET = generateRandomKey();
 
 router.use(cors());
 
@@ -22,17 +29,13 @@ router.post('/', (req, res) => {
     }
 
     if (results.length > 0) {
-      const user = { username }; // Felhasználói adatok
-      const token = generateToken(user); // Generáljuk a tokent
+      const user = { username };
+      const token = jwt.sign(user, TOKEN_SECRET, { expiresIn: '24h' });
       return res.json({ success: true, message: 'Bejelentkezés sikeres', token });
     } else {
       return res.status(401).json({ success: false, message: 'Nem megfelelő felhasználónév vagy jelszó' });
     }
   });
 });
-
-const generateToken = (user) => {
-  return jwt.sign(user, process.env.TOKEN_SECRET, { expiresIn: '24h' });
-};
 
 module.exports = router;
