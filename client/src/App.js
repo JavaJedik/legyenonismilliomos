@@ -4,6 +4,7 @@ import Login from './components/Login';
 import './App.css';
 import Quiz from './components/Quiz';
 import Home from './components/Home';
+import Register from './components/Register';
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/quiz" element={<Quiz />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </div>
     </BrowserRouter>
