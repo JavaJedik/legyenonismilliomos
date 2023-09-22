@@ -1,20 +1,34 @@
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Login from './components/Login';
-import './App.css';
-import Quiz from './components/Quiz';
 import Home from './components/Home';
-import Register from './components/Register';
+import Quiz from './components/Quiz';
 
 const App = () => {
+  const [authenticated, setAuthenticated] = useState(localStorage.getItem('token'));
+
   return (
     <BrowserRouter>
       <div>
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/register" element={<Register />} />
+          <Route
+            path="/login"
+            element={
+              !authenticated ? (
+                <Login setAuthenticated={setAuthenticated} />
+              ) : (
+                <Navigate to="/home" />
+              )
+            }
+          />
+          <Route
+            path="/home"
+            element={authenticated ? <Home /> : <Navigate to="/login" />}
+          />
+          <Route
+            path="/quiz"
+            element={authenticated ? <Quiz /> : <Navigate to="/login" />}
+          />
         </Routes>
       </div>
     </BrowserRouter>
