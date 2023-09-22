@@ -1,3 +1,8 @@
+* {
+    font-size: 1rem;
+    font-family: serif;
+}
+
 body {
     background-image: url("hatter.png");
     background-size: cover;
@@ -8,42 +13,41 @@ body {
     height: 100vh;
 }
 
-input {
+.input-field {
+    position: relative;
     background: white;
     width: 20em;
-    height: 2.5em;
-    margin: 0.25em;
+    height: 2em;
+    margin: 0.15em;
     border: thin solid grey;
     border-radius: 15px;
     transition-duration: 0.8s;
     text-align: center;
 }
 
-input:hover {
+.input-field:hover {
     border: thin solid dodgerblue;
     background: rgb(185, 197, 246);
 }
 
-button {
+.button-style {
     background: white;
     text-align: center;
     margin: 0.25em;
     border: medium solid rgb(185, 197, 246);
     border-radius: 15px;
     transition-duration: 0.8s;
-    width: 8.25em;
-    height: 2.25em;
+    width: 8em;
+    height: 2em;
     padding: 5px;
-    font-size: 1rem;
-    font-family: "Times New Roman";
     cursor: pointer;
 }
 
-button:hover {
+.button-style:hover {
     background: rgb(185, 197, 246);
 }
 
-button:active {
+.button-style:active {
     transform: scale(0.85);
     transition-duration: 0.3s;
 }
@@ -53,8 +57,8 @@ button:active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 25%;
-    height: 28%;
+    width: 40em;
+    height: 20em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,19 +73,80 @@ button:active {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 25%;
-    height: 28%;
+    width: 40em;
+    height: 20em;
     border-radius: 25px;
     z-index: 0;
 }
 
 .content {
     position: relative;
-    margin: 10px 0;
+    margin: 1em 0;
 }
 
 .content-bottom {
     color: whitesmoke;
-    font-size: 1.25em;
+    font-size: 1.5rem;
     position: relative;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .input-field {
+        position: relative;
+        background: white;
+        width: 10em;
+        height: 2em;
+        margin: 0.15em;
+        border: thin solid grey;
+        border-radius: 15px;
+        transition-duration: 0.8s;
+        text-align: center;
+    }
+
+    .button-style {
+        background: white;
+        text-align: center;
+        margin: 0.25em;
+        border: medium solid rgb(185, 197, 246);
+        border-radius: 15px;
+        transition-duration: 0.8s;
+        width: 6em;
+        height: 2em;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20em;
+        height: 20em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .blur-container {
+        background-color: rgba(70, 89, 171, 0.5);
+        backdrop-filter: blur(20px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20em;
+        height: 20em;
+        border-radius: 25px;
+        z-index: 0;
+    }
+    .content-bottom {
+        color: whitesmoke;
+        font-size: 1rem;
+        position: relative;
+        text-align: center;
+    }
 }

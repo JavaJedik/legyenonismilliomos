@@ -40,6 +40,7 @@ const Login = () => {
             <div className = "container">
                 <div className = "content">
                     <input
+                        className= "input-field"
                         type="text"
                         placeholder="Felhasználónév"
                         id="username"
@@ -49,6 +50,7 @@ const Login = () => {
                 </div>
                 <div className = "content">
                     <input
+                        className= "input-field"
                         type="password"
                         placeholder="Jelszó"
                         id="password"
@@ -57,11 +59,18 @@ const Login = () => {
                     />
                 </div>
                 <div className = "content">
-                    <button onClick={navigateHome}>Bejelentkezés</button>
-                    <button>Regisztráció</button>
+                    <button
+                        className= "button-style"
+                        onClick={navigateHome}>
+                        Bejelentkezés
+                    </button>
+                    <button
+                        className= "button-style">
+                        Regisztráció
+                    </button>
                 </div>
-                <div className = "content-bottom">
-                    <p>Jelentkezz be, vagy regisztrálj a kezdéshez!</p>
+                <div>
+                    <p className = "content-bottom">Jelentkezz be, vagy regisztrálj a kezdéshez!</p>
                 </div>
             </div>
     </body>
