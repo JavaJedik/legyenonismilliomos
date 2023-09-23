@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Register.css';
 import './Login.css';
@@ -12,7 +12,7 @@ const Home = () => {
   const navigateLogin = () => {
     navigate("/login");
   };
-  
+
   const navigateQuiz = () => {
     navigate("/quiz");
   };
@@ -24,6 +24,34 @@ const Home = () => {
   const handleDropdownItemClick = (item) => {
     setSelectedItem(item);
   };
+
+  const checkLoggedIn = async () => {
+    try {
+      const response = await fetch('http://localhost:2000/check-logged-in', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          token,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        console.log('Token érvényes:', data.username);
+      } else {
+        console.log('Hibás vagy lejárt token:', data.message);
+      }
+    } catch (error) {
+      console.error('Hiba a token ellenőrzésekor:', error);
+    }
+  };
+
+  useEffect(() => {
+    checkLoggedIn();
+  }, []);
 
   return (
     <div className="home-blur-container">

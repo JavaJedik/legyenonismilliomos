@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css';
 
-const Login = () => {
+const Login = ({ setAuthenticated }) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -22,6 +22,7 @@ const Login = () => {
       .then((data) => {
         if (data.success) {
           localStorage.setItem('token', data.token);
+          setAuthenticated(true);
           navigate('/home');
         } else {
           alert('Sikertelen bejelentkezés. Rossz felhasználónév vagy jelszó.');
@@ -29,13 +30,13 @@ const Login = () => {
       })
       .catch((error) => console.error('Fetch error:', error));
   };
-  
+
   const navigateRegister = () => {
-    navigate("/register");
+    navigate('/register');
   };
 
   return (
-    <body>
+    <div>
       <div className="blur-container"></div>
       <div className="container">
         <div className="content">
@@ -59,14 +60,10 @@ const Login = () => {
           />
         </div>
         <div className="content">
-          <button
-              className= "button-style"
-              onClick={navigateHome}>
+          <button className="button-style" onClick={navigateHome}>
             Bejelentkezés
           </button>
-          <button
-              className= "button-style"
-              onClick={navigateRegister}>
+          <button className="button-style" onClick={navigateRegister}>
             Regisztráció
           </button>
         </div>
@@ -74,7 +71,7 @@ const Login = () => {
           <p className="content-bottom">Jelentkezz be, vagy regisztrálj a kezdéshez!</p>
         </div>
       </div>
-    </body>
+    </div>
   );
 };
 
