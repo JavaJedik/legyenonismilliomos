@@ -28,52 +28,58 @@ const Quiz = () => {
             <div className = "blur-winnings-table"></div>
             <div className = "winnings-table">
                 <table>
-                    <th>Nyeremény:</th>
-                    <tr className="fix-prize">
-                        <td className="fix-prize">40.000.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>20.000.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>10.000.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>5.000.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>3.000.000 ft</td>
-                    </tr>
-                    <tr className="fix-prize">
-                        <td className="fix-prize">1.500.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>800.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>500.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>300.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>200.000 ft</td>
-                    </tr>
-                    <tr className="fix-prize">
-                        <td className="fix-prize">100.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>50.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>25.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td>10.000 ft</td>
-                    </tr>
-                    <tr>
-                        <td className = "bottom-cell">5.000 ft</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Nyeremény:</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr className="fix-prize">
+                            <td className="fix-prize">40.000.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>20.000.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>10.000.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>5.000.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>3.000.000 ft</td>
+                        </tr>
+                        <tr className="fix-prize">
+                            <td className="fix-prize">1.500.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>800.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>500.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>300.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>200.000 ft</td>
+                        </tr>
+                        <tr className="fix-prize">
+                            <td className="fix-prize">100.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>50.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>25.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td>10.000 ft</td>
+                        </tr>
+                        <tr>
+                            <td className = "bottom-cell">5.000 ft</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
@@ -101,14 +107,16 @@ const Quiz = () => {
                     <div className="question-text">question</div>
                 </div>
                 <table className="answer-table">
-                    <tr>
-                        <td className="answer">answer1</td>
-                        <td className="answer">answer2</td>
-                    </tr>
-                    <tr>
-                        <td className="answer">answer3</td>
-                        <td className="answer">answer4</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td className="answer">answer1</td>
+                            <td className="answer">answer2</td>
+                        </tr>
+                        <tr>
+                            <td className="answer">answer3</td>
+                            <td className="answer">answer4</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
