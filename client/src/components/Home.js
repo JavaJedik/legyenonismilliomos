@@ -5,20 +5,26 @@ import './Login.css';
 import './Home.css';
 import AuthService from '../AuthService';
 
-const Home = async () => {
+const Home = () => {
   const token = localStorage.getItem('token');
   const navigate = useNavigate();
   const [selectedItem, setSelectedItem] = useState(null);
-  
-  try {
-      const data = await AuthService.checkLoggedIn();
 
-      if (!data.success) {
-        navigateLogin();
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await AuthService.checkLoggedIn();
+
+        if (!data.success) {
+          navigateLogin();
+        }
+      } catch (error) {
+        console.error('Hiba az autentikációs ellenőrzésben:', error);
       }
-    } catch (error) {
-      console.error('Hiba az autentikációs ellenőrzésben:', error);
-    }
+    };
+
+    fetchData();
+  }, []);
 
   const navigateLogin = () => {
     localStorage.removeItem('token');
