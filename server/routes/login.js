@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const router = express.Router();
 const db = require('../db');
-const userAuth = require('./user-authenticate');
+const userAuth = require('../user-authenticate');
 
 router.use(cors());
 

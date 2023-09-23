@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { verifyToken } = require('./user-authenticate');
+const { verifyToken } = require('../user-authenticate');
 
 router.post('/', (req, res) => {
   const { token } = req.body;
