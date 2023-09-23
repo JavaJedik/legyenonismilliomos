@@ -70,7 +70,6 @@ td {
 .question {
     position: relative;
     width: 50em;
-    height: 12em;
     background-color: rgb(29, 42, 114);
     margin: 1em;
     border-radius: 20px;
@@ -97,8 +96,8 @@ td {
 .answer {
     position: relative;
     color: white;
-    width: inherit;
-    height: inherit;
+    width: 20em;
+    height: 2em;
     background: #6a78c9;
     margin: 1em;
     border-radius: 20px;
