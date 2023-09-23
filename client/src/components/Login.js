@@ -36,7 +36,7 @@ const Login = ({ setAuthenticated }) => {
   };
 
   return (
-    <div>
+    <div className="main-container">
       <div className="blur-container"></div>
       <div className="container">
         <div className="content">

@@ -16,7 +16,7 @@ const Register = () => {
     };
 
     return (
-        <body>
+        <div className="main-container">
             <div className = "reg-blur-container"></div>
             <div className = "reg-container">
                 <div className = "content">
@@ -76,7 +76,7 @@ const Register = () => {
                     </button>
                 </div>
             </div>
-        </body>
+        </div>
     );
 };
 

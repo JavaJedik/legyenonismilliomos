@@ -3,7 +3,7 @@
     font-family: serif;
 }
 
-body {
+.main-container {
     background-image: url("hatter.png");
     background-position: center;
     background-size: cover;
