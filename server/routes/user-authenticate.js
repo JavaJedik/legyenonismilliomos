@@ -2,7 +2,9 @@ const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
 
 const generateRandomKey = () => {
-  return crypto.randomBytes(64).toString('hex');
+  const randomBytes = crypto.randomBytes(144); // 8 * 16, azaz 16 betű
+  const asciiString = randomBytes.toString('ascii');
+  return asciiString;
 };
 
 const TOKEN_SECRET = generateRandomKey();
