@@ -6,3 +6,5 @@ A token alapú hitelesítés sikeres volt (bejelentkezéskor).
 Adatbázis lekérdezés volt használva.
 
 ![](../kepek/tomtest2.png)
+
+Később a HEXA aláíró kulcsot ASCII karaktersorozatra cseréltem, hogy gyorsabb, rövidebb, és biztonságosabb legyen.
