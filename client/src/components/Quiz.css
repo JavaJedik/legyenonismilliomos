@@ -181,9 +181,10 @@ td {
 }
 
 .title {
-    margin: auto;
-    margin-left: 0.7em;
+    margin: 0.8em auto;
+    text-align: center;
     font-size: 1.5em;
+
 }
 
 .half:before {
