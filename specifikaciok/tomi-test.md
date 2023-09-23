@@ -11,5 +11,6 @@ Később a HEXA aláíró kulcsot ASCII karaktersorozatra cseréltem, hogy gyors
 
 Ezután neki láthattam a már bejelentkezett felhasználók ellenőrzésének tokennel.
 A token aláíró kulcs minden szerverindításkor újra generálódik, 16 asci karakterből álló jelszó (nem feltörhető), és curlben már sikeresen tudtam autentikálni meglévő tokennel post kérést küldve.
+Látható, ha újraindítom a szervert vagy a token lejárt, akkor false választ küld nekem.
 
 ![](../kepek/tomtest3.png)
