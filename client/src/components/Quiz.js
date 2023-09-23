@@ -120,12 +120,12 @@ const Quiz = () => {
                 <table className="answer-table">
                     <tbody>
                         <tr>
-                            <td className="answer">answer1</td>
-                            <td className="answer">answer2</td>
+                            <td className="answer answer1">answer1</td>
+                            <td className="answer answer2">answer2</td>
                         </tr>
                         <tr>
-                            <td className="answer">answer3</td>
-                            <td className="answer">answer4</td>
+                            <td className="answer answer3">answer3</td>
+                            <td className="answer answer4">answer4</td>
                         </tr>
                     </tbody>
                 </table>
