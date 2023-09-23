@@ -2,6 +2,7 @@ Létrehoztam a weboldalt, elindítottam, és pár egyszerű dolgot implementált
 
 ![](../kepek/tomtest1.png)
 
-A token alapú hitelesítés sikeres volt
+A token alapú hitelesítés sikeres volt (bejelentkezéskor).
+Adatbázis lekérdezés volt használva.
 
 ![](../kepek/tomtest2.png)
