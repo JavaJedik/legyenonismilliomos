@@ -25,7 +25,6 @@ const App = () => {
           />
           <Route
             path="/home"
-            //element={authenticated ? <Home /> : <Navigate to="/login" />}
             element={<Home />}
           />
           <Route
