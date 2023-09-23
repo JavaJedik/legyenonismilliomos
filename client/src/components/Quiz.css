@@ -1,3 +1,7 @@
+* {
+    user-select: none;
+}
+
 table {
     position: absolute;
     background-color: rgba(70, 89, 171, 0.5);
@@ -137,7 +141,7 @@ td {
     position: relative;
     color: white;
     width: 10em;
-    height: 10em;
+    height: 7.5em;
     text-align: center;
     background: #6a78c9;
     margin: 0.5em;

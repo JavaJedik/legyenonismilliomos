@@ -17,7 +17,6 @@
     transition-duration: 0.8s;
     text-align: center;
     cursor: pointer;
-    margin: 1em;
     border: medium solid lightgreen;
 }
 
@@ -30,6 +29,7 @@
     position: relative;
     display: inline-list-item;
     text-align: center;
+    margin: 1em;
 }
 
 .home-dropdown-content {
@@ -37,12 +37,12 @@
     position: absolute;
     width: 20.25em;
     height: 5.25em;
-    margin: 0 1em;
     border-radius: 15px;
     background-color: #f1f1f1;
     border: thin solid grey;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    cursor: pointer;
 }
 
 .home-dropdown:hover .home-dropdown-content {
