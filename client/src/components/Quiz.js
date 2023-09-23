@@ -8,6 +8,18 @@ const Quiz = () => {
     const token = localStorage.getItem('token');
     const navigate = useNavigate();
     
+    const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet
+      for (let i = answers.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [answers[i], answers[j]] = [answers[j], answers[i]];
+      }
+      return answers;
+    };
+    
+    const question_difficulty = 1;
+    const question = 'Mi a fővárosa Magyarországnak?';
+    const answers = shuffleAnswers(['Budapest', 'Prága', 'Bécs', 'Warsaw']);
+    
     useEffect(() => {
     const fetchData = async () => {
       try {
@@ -115,17 +127,17 @@ const Quiz = () => {
             <div className = "blur-quiz-background"></div>
             <div className="quiz">
                 <div className="question">
-                    <div className="question-text">question</div>
+                    <div className="question-text">{question}</div>
                 </div>
                 <table className="answer-table">
                     <tbody>
                         <tr>
-                            <td className="answer answer1">answer1</td>
-                            <td className="answer answer2">answer2</td>
-                        </tr>
-                        <tr>
-                            <td className="answer answer3">answer3</td>
-                            <td className="answer answer4">answer4</td>
+                            <td className="answer answer1">{answers[0]}</td>
+                            <td className="answer answer2">{answers[1]}</td>
+                          </tr>
+                          <tr>
+                            <td className="answer answer3">{answers[2]}</td>
+                            <td className="answer answer4">{answers[3]}</td>
                         </tr>
                     </tbody>
                 </table>
