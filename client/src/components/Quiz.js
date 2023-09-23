@@ -10,7 +10,7 @@ const Quiz = () => {
 
     const userName = "Felhasználónév"
     
-    const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet
+    const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet, kívülre meg nem akarom
       for (let i = answers.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [answers[i], answers[j]] = [answers[j], answers[i]];
