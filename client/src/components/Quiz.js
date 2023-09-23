@@ -1,24 +1,34 @@
-import React from 'react';
 import "./Quiz.css";
 import { Navigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AuthService from '../AuthService';
 
-const Home = () => {
-  const token = localStorage.getItem('token');
-
-  if (!token) {
-    return <Navigate to="/login" />;
-  }
-
-  return (
-    <div>
-      <h1>Üdvözöllek a Quiz alkalmazásban!</h1>
-      <p>Ez a kezdőoldal.</p>
-    </div>
-  );
-};
-
 const Quiz = () => {
+    const token = localStorage.getItem('token');
+    const navigate = useNavigate();
+    
+    useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await AuthService.checkLoggedIn();
+
+        if (!data.success) {
+          navigateLogin();
+        }
+      } catch (error) {
+        console.error('Hiba az autentikációs ellenőrzésben:', error);
+      }
+    };
+
+      fetchData();
+    }, []);
+
+    const navigateLogin = () => {
+      localStorage.removeItem('token');
+      navigate("/login");
+    };
+    
     return (
         <div className="main-container">
             <div className = "blur-header"></div>
