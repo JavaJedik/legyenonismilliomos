@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Quiz.css";
 import { Navigate } from 'react-router-dom';
+import AuthService from '../AuthService';
 
 const Home = () => {
   const token = localStorage.getItem('token');
