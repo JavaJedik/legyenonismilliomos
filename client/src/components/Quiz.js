@@ -7,6 +7,8 @@ import AuthService from '../AuthService';
 const Quiz = () => {
     const token = localStorage.getItem('token');
     const navigate = useNavigate();
+
+    const userName = "Felhasználónév"
     
     const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet
       for (let i = answers.length - 1; i > 0; i--) {
@@ -17,7 +19,7 @@ const Quiz = () => {
     };
     
     const question_difficulty = 1;
-    const question = 'Mi a fővárosa Magyarországnak?';
+    const question = 'Mi a fővárosa Magyarországnak? Mi a fővárosa Magyarországnak?';
     const answers = shuffleAnswers(['Budapest', 'Prága', 'Bécs', 'Warsaw']);
     
     useEffect(() => {
@@ -45,7 +47,9 @@ const Quiz = () => {
         <div className="main-container">
             <div className = "blur-header"></div>
             <div className = "header">
-                <div className="title">Legyen Ön is milliomos!</div>
+                <div className="title">
+                    <p>Legyen Ön is milliomos, </p><p>{userName}!</p>
+                </div>
             </div>
 
             <div className = "blur-winnings-table"></div>

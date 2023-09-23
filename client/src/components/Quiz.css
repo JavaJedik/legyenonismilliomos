@@ -55,8 +55,8 @@ td {
 
 .quiz {
     position: absolute;
-    top: 20%;
-    margin: 2em;
+    top: 24%;
+    margin: 1em 1em 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -69,9 +69,9 @@ td {
 
 .question {
     position: relative;
-    width: 50em;
+    width: 55em;
     background-color: rgb(29, 42, 114);
-    margin: 1em;
+    margin: 2em;
     border-radius: 20px;
     color: whitesmoke;
     border-style: solid;
@@ -87,9 +87,10 @@ td {
 .answer-table {
     backdrop-filter: none;
     background: none;
-    border-spacing: 1em;
+    border-spacing: 2.5em;
     position: relative;
-    width: 52em;
+    margin: 0 0 7em;
+    width: 60em;
     height: 10em;
 }
 
@@ -97,7 +98,7 @@ td {
     position: relative;
     color: white;
     width: 20em;
-    height: 2em;
+    height: 3em;
     background: #6a78c9;
     margin: 1em;
     border-radius: 20px;
@@ -183,10 +184,10 @@ td {
     font-family: "Times New Roman";
 }
 
-.title {
+.title p {
     margin: 0.8em auto;
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
 
 }
 
