@@ -10,6 +10,22 @@ const Home = () => {
   const navigate = useNavigate();
   const [selectedItem, setSelectedItem] = useState(null);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await AuthService.checkLoggedIn();
+
+        if (!data.success) {
+          navigateLogin();
+        }
+      } catch (error) {
+        console.error('Hiba az autentikációs ellenőrzésben:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   const navigateLogin = () => {
     localStorage.removeItem('token');
     navigate("/login");
