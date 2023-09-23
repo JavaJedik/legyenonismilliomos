@@ -1,34 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import AuthService from '../AuthService';
 
-const Login = ({ setAuthenticated }) => {
-  const navigate = useNavigate();
+const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const navigateHome = () => {
-    fetch('http://localhost:2000/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        username,
-        password,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          localStorage.setItem('token', data.token);
-          setAuthenticated(true);
-          navigate('/home');
-        } else {
-          alert('Sikertelen bejelentkezés. Rossz felhasználónév vagy jelszó.');
-        }
-      })
-      .catch((error) => console.error('Fetch error:', error));
+  const navigateHome = async () => {
+    try {
+      const data = await AuthService.login(username, password);
+
+      if (data.success) {
+        navigate('/home');
+      } else {
+        alert('Sikertelen bejelentkezés. Rossz felhasználónév vagy jelszó.');
+      }
+    } catch (error) {
+      console.error('Login failed:', error);
+    }
   };
 
   const navigateRegister = () => {
