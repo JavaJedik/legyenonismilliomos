@@ -31,44 +31,42 @@ const Quiz = () => {
     const answers = shuffleAnswers(['Budapest', 'Prága', 'Bécs', 'Warsaw']);
     
     useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await AuthService.checkLoggedIn();
+  const fetchData = async () => {
+    try {
+      const data = await AuthService.checkLoggedIn();
 
-        if (!data.success) {
-          navigateLogin();
-        }
-      } catch (error) {
-        console.error('Hiba az autentikációs ellenőrzésben:', error);
-      }
-    };
+      if (!data.success) {
+        navigateLogin();
+      } else {
+        const userToken = localStorage.getItem('userToken');
 
-      fetchData();
-      
-      const sendTokenRequest = async () => {
-      const userToken = localStorage.getItem('userToken');
+        if (userToken) {
+          try {
+            const response = await fetch('http://localhost:2000/quiz-question/ask-token', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ userToken })
+            });
 
-      if (userToken) {
-        try {
-          const response = await fetch('http://localhost:2000/quiz-question/ask-token', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ userToken })
-          });
-
-          const responseData = await response.json();
-          console.log('Server response:', responseData);
-        } catch (error) {
-          console.error('Fetch error:', error);
-          navigateLogin();
+            const responseData = await response.json();
+            console.log('Server response:', responseData);
+          } catch (error) {
+            console.error('Fetch error:', error);
+            navigateLogin();
+          }
         }
       }
-    };
+    } catch (error) {
+      console.error('Hiba az autentikációs ellenőrzésben:', error);
+      navigateLogin();
+    }
+  };
 
-    sendTokenRequest();
-    }, []);
+  fetchData();
+}, []);
+
 
     const navigateLogin = () => {
       localStorage.removeItem('token');
