@@ -27,7 +27,7 @@ const Home = () => {
   }, []);
 
   const navigateLogin = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('userToken');
     navigate("/login");
   };
 
