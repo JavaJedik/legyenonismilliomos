@@ -36,8 +36,8 @@ router.post('/', (req, res) => {
 
       if (results.length > 0) {
         const user = { username };
-        const token = userAuth.generateToken(user);
-        return res.json({ success: true, message: 'Bejelentkezés sikeres', token });
+        const userToken = userAuth.generateToken(user);
+        return res.json({ success: true, message: 'Bejelentkezés sikeres', userToken });
       } else {
         return res.status(401).json({ success: false, message: 'Nem megfelelő felhasználónév vagy jelszó' });
       }
