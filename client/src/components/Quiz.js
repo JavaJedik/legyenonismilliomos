@@ -4,6 +4,9 @@ import React, { useState, useEffect } from 'react';
 import useSound from "use-sound"; // npm install use-sound
 import { useNavigate } from 'react-router-dom';
 import AuthService from '../AuthService';
+import play from "./sounds/playing.mp3"
+import correct from "./sounds/correct.mp3"
+import wrong from "./sounds/wrong.mp3"
 
 const Quiz = () => {
     const token = localStorage.getItem('token');
