@@ -12,11 +12,7 @@ const Quiz = () => {
     const token = localStorage.getItem('token');
     const navigate = useNavigate();
 
-    const [letsPlay] = useSound(play); // A játék indításánál ezt kell meghívni.
-    const [correctAnswer] = useSound(correct); // Helyes válasznál ezt kell meghívni.
-    const [wrongAnswer] = useSound(wrong); // Rossz válasznál ezt kell meghívni.
-
-    const userName = "Felhasználónév"
+    const userName = "Felhasználónév";
     
     const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet, kívülre meg nem akarom
       for (let i = answers.length - 1; i > 0; i--) {
@@ -25,6 +21,10 @@ const Quiz = () => {
       }
       return answers;
     };
+    
+    const [letsPlay] = useSound(play); // A játék indításánál ezt kell meghívni.
+    const [correctAnswer] = useSound(correct); // Helyes válasznál ezt kell meghívni.
+    const [wrongAnswer] = useSound(wrong); // Rossz válasznál ezt kell meghívni.
     
     const question_difficulty = 1;
     const question = 'Mi a fővárosa Magyarországnak? Mi a fővárosa Magyarországnak?';
@@ -44,6 +44,30 @@ const Quiz = () => {
     };
 
       fetchData();
+      
+      const sendTokenRequest = async () => {
+      const userToken = localStorage.getItem('userToken');
+
+      if (userToken) {
+        try {
+          const response = await fetch('http://localhost:2000/quiz-question/ask-token', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ userToken })
+          });
+
+          const responseData = await response.json();
+          console.log('Server response:', responseData);
+        } catch (error) {
+          console.error('Fetch error:', error);
+          navigateLogin();
+        }
+      }
+    };
+
+    sendTokenRequest();
     }, []);
 
     const navigateLogin = () => {
