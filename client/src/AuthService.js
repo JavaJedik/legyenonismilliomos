@@ -18,7 +18,7 @@ const AuthService = {
       const data = await response.json();
 
       if (data.success) {
-        localStorage.setItem('token', data.token);
+        localStorage.setItem('userToken', data.userToken);
       }
 
       return data;
@@ -30,7 +30,7 @@ const AuthService = {
   
   
   checkLoggedIn: async () => {
-    const token = localStorage.getItem('token');
+    const userToken = localStorage.getItem('userToken');
     
     try {
       const response = await fetch(`${API_URL}/check-logged-in`, {
@@ -39,7 +39,7 @@ const AuthService = {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          token
+          userToken
         })
       });
 

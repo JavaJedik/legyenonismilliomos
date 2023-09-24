@@ -14,3 +14,7 @@ A token aláíró kulcs minden szerverindításkor újra generálódik, 16 asci 
 Látható, ha újraindítom a szervert vagy a token lejárt, akkor false választ küld nekem.
 
 ![](../kepek/tomtest3.png)
+
+Később sikerült authentikációs tokent kérni bejelentkezés és sikeres hitelesítés után arra, hogy játékot indítsunk, és egy kérdés-tokent kapjunk. A token lényege, hogy visszafejtéskor tartalmazza a game_id és a difficulty paramétereket. Mivel új játék, ezért új game_id és level 1 difficulty szintet kap. Minden token egyedi, a game_id-ből pedig adatbázisból lehet következtetni a játékosra, akinek regisztrálja az új játékát. A csalás elkerülése végett lesz.
+
+![](../kepek/tomtest4.png)

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const cors = require('cors');
 const questionAuthenticate = require('../question-authenticate');
+const { verifyToken } = require('../user-authenticate');
 
 router.use(cors());
 router.use(express.json());
@@ -34,11 +35,18 @@ router.post('/ask-token', (req, res) => {
   const { userToken } = req.body;
 
   try {
+    if (!userToken) {
+      return res.status(401).json({ success: false, message: 'Token not provided' });
+    }
+
+    const decodedToken = verifyToken(userToken);
+    const { username } = decodedToken;
+
     const game_id = 1; // Example: generate a new game_id
     const difficulty = 1; // Example: generate a new difficulty
 
     const questionToken = questionAuthenticate.generateQuestionToken(game_id, difficulty);
-    return res.json({ success: true, message: 'User token is valid', questionToken });
+    return res.json({ success: true, message: 'Token is valid', username, questionToken });
   } catch (error) {
     return res.status(401).json({ success: false, message: 'Invalid user token' });
   }
