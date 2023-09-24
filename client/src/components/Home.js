@@ -6,7 +6,7 @@ import './Home.css';
 import AuthService from '../AuthService';
 
 const Home = () => {
-  const token = localStorage.getItem('token');
+  const token = localStorage.getItem('userToken');
   const navigate = useNavigate();
   const [selectedItem, setSelectedItem] = useState(null);
 

@@ -11,6 +11,7 @@
     "author": "kecyke",
     "contributors": [],
     "dependencies": {
-        "mysql2": "^3.6.1"
+        "mysql2": "^3.6.1",
+        "use-sound": "^4.0.1"
     }
 }
