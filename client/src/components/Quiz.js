@@ -22,9 +22,11 @@ const Quiz = () => {
       return answers;
     };
     
+    /* Kristóf, meghal tőle a programm, csinálj valamit!
     const [letsPlay] = useSound(play); // A játék indításánál ezt kell meghívni.
     const [correctAnswer] = useSound(correct); // Helyes válasznál ezt kell meghívni.
     const [wrongAnswer] = useSound(wrong); // Rossz válasznál ezt kell meghívni.
+     */
     
     const question_difficulty = 1;
     const question = 'Mi a fővárosa Magyarországnak? Mi a fővárosa Magyarországnak?';
