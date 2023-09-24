@@ -25,3 +25,7 @@
 - [*audience.png*](https://iconscout.com/icon/election-campaign-1)
 
 ![](../client/src/components/helps/audience.png)
+
+## Hangok:
+
+- [*playing.mp3*, *correct.mp3*, *wrong.mp3*](https://github.com/trickjsprogram/kbc-quiz-app/tree/master/src/sounds)
