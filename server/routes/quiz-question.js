@@ -3,6 +3,7 @@ const router = express.Router();
 const cors = require('cors');
 const questionAuthenticate = require('../question-authenticate');
 const { verifyToken } = require('../user-authenticate');
+const connection = require('../db');
 
 router.use(cors());
 router.use(express.json());
@@ -31,7 +32,7 @@ router.post('/', (req, res) => {
   }
 });
 
-router.post('/ask-token', (req, res) => {
+router.post('/ask-token', async (req, res) => {
   const { userToken } = req.body;
 
   try {
@@ -42,11 +43,21 @@ router.post('/ask-token', (req, res) => {
     const decodedToken = verifyToken(userToken);
     const { username } = decodedToken;
 
-    const game_id = 1; // Example: generate a new game_id
-    const difficulty = 1; // Example: generate a new difficulty
+    const insertGameQuery = `INSERT INTO game (player_id, date, is_in_progress) 
+                             VALUES ((SELECT id FROM player WHERE name = ?), CURDATE(), 1)`;
+    
+    connection.query(insertGameQuery, [username], (insertError, insertResults) => {
+      if (insertError) {
+        console.error('Error inserting game:', insertError);
+        return res.status(500).json({ success: false, message: 'Error inserting game' });
+      }
 
-    const questionToken = questionAuthenticate.generateQuestionToken(game_id, difficulty);
-    return res.json({ success: true, message: 'Token is valid', username, questionToken });
+      const game_id = insertResults.insertId; // Retrieve the auto-incremented game_id
+      const difficulty = 1;
+
+      const questionToken = questionAuthenticate.generateQuestionToken(game_id, difficulty);
+      return res.json({ success: true, message: 'Token is valid', username, questionToken });
+    });
   } catch (error) {
     return res.status(401).json({ success: false, message: 'Invalid user token' });
   }
