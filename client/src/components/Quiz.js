@@ -1,12 +1,17 @@
 import "./Quiz.css";
 import { Navigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
+import useSound from "use-sound"; // npm install use-sound
 import { useNavigate } from 'react-router-dom';
 import AuthService from '../AuthService';
 
 const Quiz = () => {
     const token = localStorage.getItem('token');
     const navigate = useNavigate();
+
+    const [letsPlay] = useSound(play); // A játék indításánál ezt kell meghívni.
+    const [correctAnswer] = useSound(correct); // Helyes válasznál ezt kell meghívni.
+    const [wrongAnswer] = useSound(wrong); // Rossz válasznál ezt kell meghívni.
 
     const userName = "Felhasználónév"
     
