@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './Register.css';
 import './Login.css';
 import './Home.css';
-import AuthService from '../AuthService';
+const AuthService = require('../AuthService');
 
 const Home = () => {
   const token = localStorage.getItem('userToken');

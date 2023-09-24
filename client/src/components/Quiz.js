@@ -3,13 +3,13 @@ import { Navigate } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import useSound from "use-sound"; // npm install use-sound
 import { useNavigate } from 'react-router-dom';
-import AuthService from '../AuthService';
-import play from "./sounds/playing.mp3"
-import correct from "./sounds/correct.mp3"
-import wrong from "./sounds/wrong.mp3"
+const AuthService = require('../AuthService');
+//import play from "./sounds/playing.mp3"
+//import correct from "./sounds/correct.mp3"
+//import wrong from "./sounds/wrong.mp3"
 
 const Quiz = () => {
-    console.log("KURVA ANYÁD");
+    console.log("Loading Quiz");
     const userToken = localStorage.getItem('userToken');
     const navigate = useNavigate();
     
@@ -39,32 +39,23 @@ const Quiz = () => {
     };
     
     const fetchData = async () => {
-    const data = await AuthService.checkLoggedIn();
+        try {
+          const response = await AuthService.askToken();
 
-    try {
-      if (!data.success) {
-        navigateLogin();
-      } else {
-        const userToken = localStorage.getItem('userToken');
-
-        if (userToken) {
-          const response = await fetch('http://localhost:2000/quiz-question/ask-token', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ userToken })
-          });
-          
-          const responseData = await response.json();
-          console.log('Server response:', responseData);
+          if (!response.success) {
+            navigateLogin();
+          } else {
+            console.log('Server response:', response);
+          }
+        } catch (error) {
+          console.error('Token request failed:', error);
+          navigateLogin();
         }
-      }
-    } catch (error) {
-      console.error('Fetch error:', error);
-      navigateLogin();
-    }
-  }; fetchData();
+      };
+
+      useEffect(() => {
+        fetchData();
+      }, []);
 
     return (
         <div className="main-container">
@@ -175,6 +166,6 @@ const Quiz = () => {
 
         </div>
     );
-}
+};
 
 export default Quiz;
