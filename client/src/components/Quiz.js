@@ -9,6 +9,7 @@ import correct from "./sounds/correct.mp3"
 import wrong from "./sounds/wrong.mp3"
 
 const Quiz = () => {
+    console.log("KURVA ANYÁD");
     const userToken = localStorage.getItem('userToken');
     const navigate = useNavigate();
     
@@ -32,49 +33,39 @@ const Quiz = () => {
     const question = 'Mi a fővárosa Magyarországnak?';
     const answers = shuffleAnswers(['Budapest', 'Prága', 'Bécs', 'Warsaw']);
     
-    const fetchData = async () => {
-      try {
-        const data = await AuthService.checkLoggedIn();
-
-        if (!data.success) {
-          navigateLogin();
-        } else {
-          const userToken = localStorage.getItem('userToken');
-
-          if (userToken) {
-            try {
-              const response = await fetch('http://localhost:2000/quiz-question/ask-token', {
-                method: 'POST',
-                headers: {
-                  'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ userToken })
-              });
-
-              const responseData = await response.json();
-              console.log('Server response:', responseData);
-
-            } catch (error) {
-              console.error('Fetch error:', error);
-              navigateLogin();
-            }
-          }
-        }
-      } catch (error) {
-        console.error('Hiba az autentikációs ellenőrzésben:', error);
-        navigateLogin();
-      }
-    };
-
-    useEffect(() => {
-      fetchData();
-    }, []);
-
     const navigateLogin = () => {
       localStorage.removeItem('userToken');
       navigate("/login");
     };
     
+    const fetchData = async () => {
+    const data = await AuthService.checkLoggedIn();
+
+    try {
+      if (!data.success) {
+        navigateLogin();
+      } else {
+        const userToken = localStorage.getItem('userToken');
+
+        if (userToken) {
+          const response = await fetch('http://localhost:2000/quiz-question/ask-token', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ userToken })
+          });
+          
+          const responseData = await response.json();
+          console.log('Server response:', responseData);
+        }
+      }
+    } catch (error) {
+      console.error('Fetch error:', error);
+      navigateLogin();
+    }
+  }; fetchData();
+
     return (
         <div className="main-container">
             <div className = "blur-header"></div>
