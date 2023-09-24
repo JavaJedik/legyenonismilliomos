@@ -9,10 +9,8 @@ import correct from "./sounds/correct.mp3"
 import wrong from "./sounds/wrong.mp3"
 
 const Quiz = () => {
-    const token = localStorage.getItem('token');
+    const userToken = ''; // Gets value in fetchdata() method
     const navigate = useNavigate();
-
-    const userName = "Felhasználónév";
     
     const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet, kívülre meg nem akarom
       for (let i = answers.length - 1; i > 0; i--) {
@@ -28,6 +26,8 @@ const Quiz = () => {
     const [wrongAnswer] = useSound(wrong); // Rossz válasznál ezt kell meghívni.
      */
     
+    const userName = "Felhasználónév";
+    
     const question_difficulty = 1;
     const question = 'Mi a fővárosa Magyarországnak?';
     const answers = shuffleAnswers(['Budapest', 'Prága', 'Bécs', 'Warsaw']);
@@ -39,7 +39,7 @@ const Quiz = () => {
         if (!data.success) {
           navigateLogin();
         } else {
-          const userToken = localStorage.getItem('userToken');
+          userToken = localStorage.getItem('userToken');
 
           if (userToken) {
             try {
