@@ -71,7 +71,7 @@ const Quiz = () => {
     }, []);
 
     const navigateLogin = () => {
-      localStorage.removeItem('token');
+      localStorage.removeItem('userToken');
       navigate("/login");
     };
     
