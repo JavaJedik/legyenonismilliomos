@@ -9,7 +9,7 @@ import correct from "./sounds/correct.mp3"
 import wrong from "./sounds/wrong.mp3"
 
 const Quiz = () => {
-    const userToken = ''; // Gets value in fetchdata() method
+    const userToken = localStorage.getItem('userToken');
     const navigate = useNavigate();
     
     const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet, kívülre meg nem akarom
@@ -39,7 +39,7 @@ const Quiz = () => {
         if (!data.success) {
           navigateLogin();
         } else {
-          userToken = localStorage.getItem('userToken');
+          const userToken = localStorage.getItem('userToken');
 
           if (userToken) {
             try {
