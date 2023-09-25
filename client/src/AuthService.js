@@ -66,7 +66,13 @@ const askToken = async () => {
       throw new Error('Network response was not ok');
     }
 
-    return await response.json();
+    const data = await response.json();
+    
+    if (data && data.questionToken) {
+      localStorage.setItem('questionToken', data.questionToken);
+    }
+    
+    return data;
   } catch (error) {
     console.error('Fetch error:', error);
     throw new Error('Token request failed');

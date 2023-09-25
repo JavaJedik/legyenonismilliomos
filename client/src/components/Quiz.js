@@ -12,66 +12,105 @@ const Quiz = () => {
     console.log("Loading Quiz");
     const userToken = localStorage.getItem('userToken');
     const navigate = useNavigate();
-     const [hasFetchedData, setHasFetchedData] = useState(false); 
-    
-    const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet, kívülre meg nem akarom
-      for (let i = answers.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [answers[i], answers[j]] = [answers[j], answers[i]];
-      }
-      return answers;
+
+    const [question, setQuestion] = useState('Mi a fővárosa Magyarországnak?');
+    const [answers, setAnswers] = useState(['Budapest', 'Prága', 'Bécs', 'Warsaw']);
+    const [username, setUsername] = useState('Felhasználónév');
+
+    const shuffleAnswers = (answers) => {
+        for (let i = answers.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [answers[i], answers[j]] = [answers[j], answers[i]];
+        }
+        return answers;
     };
-    
-    /* Kristóf, meghal tőle a programm, csinálj valamit!
-    const [letsPlay] = useSound(play); // A játék indításánál ezt kell meghívni.
-    const [correctAnswer] = useSound(correct); // Helyes válasznál ezt kell meghívni.
-    const [wrongAnswer] = useSound(wrong); // Rossz válasznál ezt kell meghívni.
-     */
-    
-    const userName = "Felhasználónév";
-    
-    const question_difficulty = 1;
-    const question = 'Mi a fővárosa Magyarországnak?';
-    const answers = shuffleAnswers(['Budapest', 'Prága', 'Bécs', 'Warsaw']);
-    
+
     const navigateLogin = () => {
-      localStorage.removeItem('userToken');
-      navigate("/login");
+        localStorage.removeItem('userToken');
+        navigate("/login");
+    };
+
+    const fetchData = async () => {
+        try {
+            const response = await AuthService.askToken();
+
+            if (!response.success) {
+                navigateLogin();
+            } else {
+                console.log('Server response:', response);
+                setUsername(response.username);
+            }
+        } catch (error) {
+            console.error('Token request failed:', error);
+            navigateLogin();
+        }
+    };
+
+    const handleFetchDataClick = () => {
+        fetchData();
+    };
+
+    const handleNextButtonClick = async () => {
+        const questionToken = localStorage.getItem('questionToken');
+        const url = "http://localhost:2000/quiz-question/ask-question";
+
+        try {
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ questionToken })
+            });
+
+            const data = await response.json();
+            console.log('Server response:', data);
+
+            setQuestion(data.question);
+            setAnswers(data.answers);
+
+        } catch (error) {
+            console.error('Fetch error:', error);
+        }
     };
     
-    const fetchData = async () => {
+    const handleAnswerButtonClick = async (chosenAnswer) => {
+    const questionToken = localStorage.getItem('questionToken');
+    const question = 'Mi a fővárosa Magyarországnak?'; // A kérdés, ezt lehet dinamikusan is állítani
+    const requestBody = {
+      questionToken,
+      question,
+      chosen_answer: chosenAnswer
+    };
+
     try {
-      const response = await AuthService.askToken();
+      const response = await fetch('http://localhost:2000/answer-question', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+      });
 
-      if (!response.success) {
-        navigateLogin();
-      } else {
-        console.log('Server response:', response);
-      }
+      const data = await response.json();
+      console.log('Answer response:', data);
+
     } catch (error) {
-      console.error('Token request failed:', error);
-      navigateLogin();
-    }
-  };
-
-  const handleFetchDataClick = () => {
-    if (!hasFetchedData) {
-      fetchData();
-      setHasFetchedData(true);
+      console.error('Answer request failed:', error);
     }
   };
 
     return (
         <div className="main-container">
-            <div className = "blur-header"></div>
-            <div className = "header">
+            <div className="blur-header"></div>
+            <div className="header">
                 <div className="title">
-                    <p>Legyen Ön is milliomos, </p><p>{userName}!</p>
+                    <p>Legyen Ön is milliomos, </p><p>{username}!</p>
                 </div>
             </div>
 
-            <div className = "blur-winnings-table"></div>
-            <div className = "winnings-table">
+            <div className="blur-winnings-table"></div>
+            <div className="winnings-table">
                 <table>
                     <thead>
                         <tr>
@@ -122,7 +161,7 @@ const Quiz = () => {
                             <td>10.000 ft</td>
                         </tr>
                         <tr>
-                            <td className = "bottom-cell">5.000 ft</td>
+                            <td className="bottom-cell">5.000 ft</td>
                         </tr>
                     </tbody>
                 </table>
@@ -146,7 +185,7 @@ const Quiz = () => {
                 </div>
             </div>
 
-            <div className = "blur-quiz-background"></div>
+            <div className="blur-quiz-background"></div>
             <div className="quiz">
                 <div className="question">
                     <div className="question-text">{question}</div>
@@ -154,21 +193,31 @@ const Quiz = () => {
                 <table className="answer-table">
                     <tbody>
                         <tr>
-                            <td className="answer answer1">{answers[0]}</td>
-                            <td className="answer answer2">{answers[1]}</td>
-                          </tr>
-                          <tr>
-                            <td className="answer answer3">{answers[2]}</td>
-                            <td className="answer answer4">{answers[3]}</td>
+                            <td className="answer answer1">
+                            <button onClick={() => handleAnswerButtonClick(answers[0])}>{answers[0]}</button>
+                          </td>
+                          <td className="answer answer2">
+                            <button onClick={() => handleAnswerButtonClick(answers[1])}>{answers[1]}</button>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td className="answer answer3">
+                            <button onClick={() => handleAnswerButtonClick(answers[2])}>{answers[2]}</button>
+                          </td>
+                          <td className="answer answer4">
+                            <button onClick={() => handleAnswerButtonClick(answers[3])}>{answers[3]}</button>
+                          </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
             <button className="stop" onClick={handleFetchDataClick}>
-            Álljunk meg, Vágó Úr
+                Álljunk meg, Vágó Úr
             </button>
-            <button className="next">Menjünk tovább, Vágó Úr</button>
+            <button className="next" onClick={handleNextButtonClick}>
+                Menjünk tovább, Vágó Úr
+            </button>
 
         </div>
     );

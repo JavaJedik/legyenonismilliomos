@@ -21,8 +21,8 @@ const generateQuestionToken = (game_id, difficulty) => {
   return jwt.sign(payload, TOKEN_SECRET_GAME_ID, { expiresIn: '24h' });
 };
 
-const verifyQuestionToken = (token) => {
-  return jwt.verify(token, TOKEN_SECRET_GAME_ID);
+const verifyQuestionToken = (questionToken) => {
+  return jwt.verify(questionToken, TOKEN_SECRET_GAME_ID);
 };
 
 module.exports = {
