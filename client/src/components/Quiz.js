@@ -12,6 +12,7 @@ const Quiz = () => {
     console.log("Loading Quiz");
     const userToken = localStorage.getItem('userToken');
     const navigate = useNavigate();
+     const [hasFetchedData, setHasFetchedData] = useState(false); 
     
     const shuffleAnswers = (answers) => { // Nem ide akartam deklarálni, de lentebb nem lehet, kívülre meg nem akarom
       for (let i = answers.length - 1; i > 0; i--) {
@@ -39,23 +40,26 @@ const Quiz = () => {
     };
     
     const fetchData = async () => {
-        try {
-          const response = await AuthService.askToken();
+    try {
+      const response = await AuthService.askToken();
 
-          if (!response.success) {
-            navigateLogin();
-          } else {
-            console.log('Server response:', response);
-          }
-        } catch (error) {
-          console.error('Token request failed:', error);
-          navigateLogin();
-        }
-      };
+      if (!response.success) {
+        navigateLogin();
+      } else {
+        console.log('Server response:', response);
+      }
+    } catch (error) {
+      console.error('Token request failed:', error);
+      navigateLogin();
+    }
+  };
 
-      useEffect(() => {
-        fetchData();
-      }, []);
+  const handleFetchDataClick = () => {
+    if (!hasFetchedData) {
+      fetchData();
+      setHasFetchedData(true);
+    }
+  };
 
     return (
         <div className="main-container">
@@ -161,7 +165,9 @@ const Quiz = () => {
                 </table>
             </div>
 
-            <button className="stop">Álljunk meg, Vágó Úr</button>
+            <button className="stop" onClick={handleFetchDataClick}>
+            Álljunk meg, Vágó Úr
+            </button>
             <button className="next">Menjünk tovább, Vágó Úr</button>
 
         </div>
